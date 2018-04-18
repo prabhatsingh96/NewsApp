@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fluper.newsapp.profile.ChooseCategroyActivity">
+
+
+    <ImageView
+        android:id="@+id/search_category"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:src="@drawable/search"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_width="35dp"
+        android:layout_height="35dp" />
+
+    <TextView
+        android:id="@+id/hello_text"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:text="Hello"
+        android:textSize="24dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="70dp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <com.example.fluper.newsapp.appUtils.MyTextView
+        android:id="@+id/text_choose_cat"
+        android:layout_below="@+id/hello_text"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_30"
+        android:layout_marginTop="5dp"
+        android:text="@string/pick_your_favorite_interest_to_set_up_your_feeds"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:id="@+id/cat_layout"
+        android:layout_below="@+id/text_choose_cat"
+        zhy:max_select="-1"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+
+     <!--   <TextView
+            android:id="@+id/entertainment"
+            android:text="Entertainment"
+            android:background="@drawable/choose_cat_layout"
+            android:gravity="center"
+            android:textSize="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_12"
+            android:paddingStart="15dp"
+            android:layout_marginRight="@dimen/dp_12"
+            android:paddingEnd="@dimen/dp_15"
+            android:textColor="@color/colorPink"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+-->
+
+
+
+    </com.zhy.view.flowlayout.TagFlowLayout>
+
+
+
+
+
+
+
+
+
+
+    <!--
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_categroy"
+        android:layout_below="@+id/text_choose_cat"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+    -->
+
+
+
+
+
+<!--
+    <com.zhy.view.flowlayout.FlowLayout
+        android:id="@+id/cat_layout"
+        android:layout_below="@+id/text_choose_cat"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15" />-->
+     <!--   <TextView
+            android:id="@+id/entertainment"
+            android:text="Entertainment"
+            android:background="@drawable/choose_cat_layout"
+            android:gravity="center"
+            android:textSize="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_12"
+            android:paddingStart="15dp"
+            android:layout_marginRight="@dimen/dp_12"
+            android:paddingEnd="@dimen/dp_15"
+            android:textColor="@color/colorPink"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/relationship"
+            android:text="Relationship"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/choose_cat_layout"
+            android:gravity="center"
+            android:layout_marginTop="12dp"
+            android:textSize="@dimen/dp_15"
+            android:paddingStart="15dp"
+            android:paddingEnd="@dimen/dp_15"
+            android:textColor="@color/colorPink"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/cricket"
+            android:text="Cricket"
+            android:layout_marginTop="@dimen/dp_12"
+            android:background="@drawable/choose_cat_layout"
+            android:gravity="center"
+            android:layout_marginRight="12dp"
+            android:textSize="@dimen/dp_15"
+            android:paddingStart="15dp"
+            android:paddingEnd="@dimen/dp_15"
+            android:textColor="@color/colorPink"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/politics"
+            android:text="Politics"
+            android:background="@drawable/choose_cat_layout"
+            android:gravity="center"
+            android:textSize="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginRight="12dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="@dimen/dp_15"
+            android:textColor="@color/colorPink"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/tech"
+            android:text="Tech"
+            android:background="@drawable/choose_cat_layout"
+            android:gravity="center"
+            android:layout_marginRight="12dp"
+            android:textSize="@dimen/dp_15"
+            android:paddingStart="15dp"
+            android:layout_marginTop="@dimen/dp_12"
+            android:paddingEnd="@dimen/dp_15"
+            android:textColor="@color/colorPink"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/life_"
+            android:text="Tech"
+            android:background="@drawable/choose_cat_layout"
+            android:gravity="center"
+            android:layout_marginRight="12dp"
+            android:textSize="@dimen/dp_15"
+            android:paddingStart="15dp"
+            android:layout_marginTop="@dimen/dp_12"
+            android:paddingEnd="@dimen/dp_15"
+            android:textColor="@color/colorPink"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+-->
+
+
+    <Button
+        android:id="@+id/signup_btn"
+        android:background="#11998f"
+        android:layout_alignParentBottom="true"
+        android:text="Go"
+        android:textColor="@color/colorWhite"
+        android:textAllCaps="false"
+        android:textSize="@dimen/sp_15"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+</RelativeLayout>
+</layout>

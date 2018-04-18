@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fluper.newsapp.authentication.HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_tool"
+        android:background="@drawable/half_bg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <ImageView
+            android:id="@+id/tool_logo_lg"
+            android:src="@drawable/logo_lg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_14"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp" />
+        <com.example.fluper.newsapp.appUtils.MyTextView
+            android:id="@+id/tool_text"
+            android:layout_below="@+id/tool_logo_lg"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="@dimen/dp_24"
+            android:textColor="@color/colorWhite"
+            android:text="Welcome to Live News. "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/home_tab_layout"
+            android:layout_below="@+id/tool_text"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            app:tabIndicatorHeight="2dp"
+            app:tabIndicatorColor="@color/colorGreen"
+            android:layout_marginTop="@dimen/dp_0.5"
+            android:layout_alignParentBottom="true"
+            app:tabSelectedTextColor="@color/colorWhite"
+            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+            app:tabTextColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.design.widget.TabLayout>
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:layout_below="@+id/relative_layout_tool"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:id="@+id/view_pager"
+        >
+    </android.support.v4.view.ViewPager>
+
+
+
+</RelativeLayout>
+</layout>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fluper.newsapp.home.ArticleDescriptionActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/tool_relati_description"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/details_img">
+
+                <ImageView
+                    android:id="@+id/back_btn_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/back_black"
+                    android:tint="@color/colorPrimaryDark" />
+
+                <ImageView
+                    android:id="@+id/download_tool"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/restore_tool"
+                    android:src="@drawable/bottom_download_de"
+                    android:tint="@color/colorPrimaryDark" />
+
+                <ImageView
+                    android:id="@+id/restore_tool"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/bottom_bookmark_de"
+                    android:tint="@color/colorPrimaryDark" />
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="@dimen/dp_18"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:background="@drawable/article_desc_count_layout"
+                    android:gravity="center"
+                    android:text="5/30"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/dp_14" />
+
+            </RelativeLayout>
+
+    <TextView
+        android:id="@+id/marget_wapler_text"
+        android:text="margaret wappler"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/tool_relati_description"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:textSize="@dimen/dp_13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <com.example.fluper.newsapp.appUtils.MyTextView
+        android:id="@+id/available_text"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_below="@+id/tool_relati_description"
+        android:text="Available"
+        android:textColor="@color/colorbutton"
+        android:background="@drawable/custom_available_layout"
+        android:gravity="center"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/heading_text"
+        android:text="Silence, Please, I'm Heading"
+        android:textSize="@dimen/dp_20"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/marget_wapler_text"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_120"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/date_text"
+        android:layout_below="@+id/heading_text"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:text="USA English January 20, 2018"
+        android:textColor="@color/colorPink"
+        android:textSize="13dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/price_text"
+        android:layout_below="@+id/date_text"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:text="Price"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/price_ammount_text"
+        android:layout_below="@+id/price_text"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:text="$25.00"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/dp_2"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/subcribre_layout"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_below="@+id/available_text"
+        android:layout_marginTop="@dimen/dp_110"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/subcribe_image"
+        android:src="@drawable/subscribe"
+        android:layout_width="18dp"
+        android:layout_height="18dp" />
+
+    <TextView
+        android:id="@+id/subcribe_text"
+        android:text="Subscribe"
+        android:layout_marginLeft="3dp"
+        android:textColor="#f70e06"
+        android:textSize="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/description_text"
+        android:layout_below="@+id/subcribre_layout"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:text="Description"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/decription_containt_text"
+        android:layout_below="@+id/description_text"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="@dimen/dp_20"
+        android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipicing_elit_sed_to_euismod_tempor_incididunt_ut_labore_it_dolor_read_more"
+        android:textSize="15dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+   <!-- <TextView
+        android:id="@+id/read_more"
+        android:layout_below="@+id/description_text"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_50"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="3dp"
+        android:text="Read More..."
+        android:textSize="16dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+-->
+
+
+    <Button
+        android:id="@+id/buynow_btn"
+        android:layout_below="@+id/decription_containt_text"
+        android:background="@drawable/buy_now_btn_layout"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:text="Buy Now"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16dp"
+        android:textAllCaps="false"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/releted_text"
+                android:text="Related Search"
+                android:textSize="@dimen/dp_20"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@+id/buynow_btn"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_120"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+
+            <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_product_description"
+        android:layout_below="@+id/releted_text"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
+</layout>

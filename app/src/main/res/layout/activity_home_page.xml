@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fluper.newsapp.home.HomePageActivity">
+
+    <include layout="@layout/header_layout"
+        android:id="@+id/include_tool_home"></include>
+
+
+    <ScrollView
+        android:layout_below="@+id/include_tool_home"
+        android:layout_marginBottom="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/article_featured_text"
+        android:text="Featured Article"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="@dimen/dp_14"
+        android:textStyle="bold"
+        android:textSize="@dimen/dp_22"
+        android:textColor="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/article_featured_text"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:orientation="horizontal"
+        android:id="@+id/home_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+            <View
+                android:id="@+id/view_recycler_line"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_below="@+id/home_recycler_view"
+                android:background="@color/colorPink"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"></View>
+            <TextView
+                android:id="@+id/article_featured_textt"
+                android:layout_below="@+id/view_recycler_line"
+                android:text="Featured Article"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/dp_12"
+                android:textStyle="bold"
+                android:textSize="@dimen/dp_22"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_below="@+id/article_featured_textt"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:orientation="horizontal"
+                android:id="@+id/home_recycler_vieww"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <Button
+                android:id="@+id/btn_see_all"
+                android:layout_below="@+id/home_recycler_vieww"
+                android:text="See All"
+                android:textColor="@color/colorPurple"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="70dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/sign_up_custom_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <include layout="@layout/bottom_layout"
+        android:id="@+id/include_bottom_layout"></include>
+
+
+   <!-- <Button
+          android:text="See All"
+          android:textColor="@color/colorPurple"
+          android:textSize="13dp"
+          android:textStyle="bold"
+          android:layout_alignParentBottom="true"
+          android:layout_marginBottom="@dimen/dp_65"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="20dp"
+          android:background="@drawable/sign_up_custom_layout"
+          android:layout_width="match_parent"
+          android:layout_height="50dp" />-->
+
+</RelativeLayout>
+</layout>

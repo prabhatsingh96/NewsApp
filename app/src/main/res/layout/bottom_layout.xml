@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_footer"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_alignParentBottom="true">
+        <View
+            android:background="@color/colorPurple"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></View>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_3" />
+
+        <ImageView
+            android:id="@+id/iv_home"
+            android:layout_width="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:src="@drawable/bottom_home_de" />
+        <TextView
+            android:id="@+id/home_text"
+            android:layout_below="@+id/iv_home"
+            android:text="HOME"
+            android:textColor="@color/colorPrimary"
+            android:textSize="13dp"
+            android:layout_marginLeft="@dimen/dp_23"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_toRightOf="@id/iv_home"
+            android:src="@drawable/search" />
+        <TextView
+            android:layout_below="@+id/iv_search"
+            android:text="SEARCH"
+            android:textColor="@color/colorPrimary"
+            android:textSize="13dp"
+            android:layout_marginLeft="@dimen/dp_28"
+            android:layout_marginBottom="6dp"
+            android:layout_toRightOf="@+id/home_text"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <ImageView
+            android:id="@+id/iv_bookmark"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_toRightOf="@id/iv_search"
+            android:src="@drawable/bottom_bookmark_de" />
+        <TextView
+            android:layout_below="@+id/iv_bookmark"
+            android:text="BOOKMARK"
+            android:textColor="@color/colorPrimary"
+            android:textSize="13dp"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginBottom="6dp"
+            android:layout_toRightOf="@+id/iv_search"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <ImageView
+            android:id="@+id/iv_saved"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_toRightOf="@+id/iv_bookmark"
+            android:src="@drawable/bottom_download_de" />
+
+        <TextView
+            android:layout_below="@+id/iv_saved"
+            android:text="SAVED"
+            android:textColor="@color/colorPrimary"
+            android:textSize="13dp"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginBottom="6dp"
+            android:layout_toRightOf="@+id/iv_bookmark"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="40dp"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_height="25dp"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_toRightOf="@+id/iv_saved"
+            android:src="@drawable/bottom_profile_de" />
+        <TextView
+            android:id="@+id/profile_text"
+            android:layout_below="@+id/iv_profile"
+            android:text="PROFILE"
+            android:textColor="@color/colorPrimary"
+            android:textSize="13dp"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_27"
+            android:layout_marginBottom="6dp"
+            android:layout_toRightOf="@+id/iv_saved"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+</layout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="or">or</string>
+    <string name="please_enter_otp_received_on_you_registered_email_id">Please enter OTP received on your registered Email Id.</string>
+    <string name="pick_your_favorite_interest_to_set_up_your_feeds">Pick your favorite interest to set up your feeds</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipicing_elit_sed_to_euismod_tempor_incididunt_ut_labore_it_dolor">Lorem ipsum dolor sit amet, consectetur adipicing elit, sed to euismod tempor incididunt ut labore it dolor</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipicing_elit_sed_to_euismod_tempor_incididunt_ut_labore_it_dolor_read_more">lorem ipsum dolor sit amet consectetur adipicing elit sed to euismod tempor incididunt ut labore it dolor Read More...</string>
+</resources>
