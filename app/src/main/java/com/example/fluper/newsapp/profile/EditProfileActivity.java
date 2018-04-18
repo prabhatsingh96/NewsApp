@@ -9,6 +9,7 @@ import android.widget.ImageView;
 
 import com.example.fluper.newsapp.R;
 import com.example.fluper.newsapp.appUtils.Validation;
+import com.example.fluper.newsapp.authentication.ChangePasswordActivity;
 import com.example.fluper.newsapp.databinding.ActivityEditProfileBinding;
 
 import butterknife.BindView;
@@ -32,6 +33,7 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         binding.inludeCreateToolLayout.headerToolText.setText ("Edit Profile");
         binding.inludeCreateToolLayout.headerBack.setOnClickListener (this);
         binding.saveBtn.setOnClickListener (this);
+        binding.changePasswordCreate.setOnClickListener (this);
         
 
     }
@@ -42,6 +44,10 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
             case R.id.header_back:
                 super.onBackPressed ();
                 break;
+            case R.id.change_password_create:
+                startActivity (new Intent (this, ChangePasswordActivity.class));
+                break;
+
             case R.id.saveBtn:
                 if(!Validation.isValidPassword (binding.fullNameTextCreateProfilee.getText ().toString ())) {
                     binding.fullNameTextCreateProfilee.setEnabled (true);
@@ -61,12 +67,12 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
 
                     break;
                 }
-                else if(!Validation.isValidPassword (binding.mobileTextCreateProfilee.getText ().toString ().trim ())){
+               /* else if(!Validation.isValidPassword (binding.mobileTextCreateProfilee.getText ().toString ().trim ())){
                     binding.mobileTextCreateProfilee.setEnabled (true);
                     binding.mobileTextCreateProfilee.setError ("Please enter mobile number.");
 
                     break;
-                }
+                }*/
 
                 else if(!Validation.isValidPassword (binding.intrestTextCreateProfilee.getText ().toString ().trim ())){
                     binding.intrestTextCreateProfilee.setEnabled (true);

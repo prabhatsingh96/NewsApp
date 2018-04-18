@@ -48,7 +48,7 @@
             android:inputType="text"
             android:singleLine="true"
             android:textSize="@dimen/dp_14"
-            android:textColor="@color/colorbutton"
+            android:textColor="@color/colorGrey"
             android:background="@android:color/transparent"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
@@ -75,7 +75,7 @@
             android:background="@android:color/transparent"
             android:inputType="text"
             android:textSize="@dimen/dp_14"
-            android:textColor="@color/colorbutton"
+            android:textColor="@color/colorGrey"
             android:singleLine="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
@@ -97,19 +97,21 @@
         android:layout_marginTop="@dimen/dp_12"
         android:layout_height="38dp">
 
-        <com.hbb20.CountryCodePicker
+        <com.example.fluper.newsapp.appUtils.MyTextView
             android:layout_weight="1"
             android:layout_gravity="center"
             android:layout_width="50dp"
             android:layout_height="40dp"
-            android:layout_marginTop="1dp"
-            android:background="@null"
-            app:ccp_contentColor="@color/colorbutton"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/dp_14"
+            android:textColor="@color/colorGrey"
+            >
+           <!-- app:ccp_contentColor="@color/colorGrey"
             app:ccp_showFlag="false"
             app:ccp_showNameCode="false"
-            app:ccp_textSize="15sp">
+            app:ccp_textSize="15sp"-->
 
-        </com.hbb20.CountryCodePicker>
+        </com.example.fluper.newsapp.appUtils.MyTextView>
 
         <View
             android:layout_weight="1"
@@ -137,7 +139,7 @@
                 android:inputType="phone"
                 android:maxLength="10"
                 android:textSize="14dp"
-                android:textColor="@color/colorbutton"
+                android:textColor="@color/colorGrey"
                 android:singleLine="true"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
@@ -185,7 +187,8 @@
             android:layout_marginBottom="@dimen/dp_8"
             android:background="@android:color/transparent"
             android:inputType="text"
-            android:textColor="@color/colorbutton"
+            android:text="Relationship,LifeStyle,Tech"
+            android:textColor="@color/colorGrey"
             android:singleLine="true"
             android:textSize="@dimen/dp_14"
             android:layout_width="match_parent"

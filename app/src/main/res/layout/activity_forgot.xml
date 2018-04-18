@@ -48,7 +48,7 @@
                 android:focusable="auto"
                 android:textCursorDrawable="@color/colorbutton"
                 android:textColorHint="@color/colorbutton"
-                android:textColor="@color/colorbutton"
+                android:textColor="@color/colorGrey"
                 android:layout_marginTop="@dimen/dp_20"
                 android:background="@android:color/transparent"
                 android:inputType="textEmailAddress"

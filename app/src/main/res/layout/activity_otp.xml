@@ -46,7 +46,7 @@
             android:textCursorDrawable="@color/colorbutton"
             android:textColorHint="@color/colorbutton"
             android:background="@android:color/transparent"
-            android:textColor="@color/colorbutton"
+            android:textColor="@color/colorGrey"
             android:paddingBottom="@dimen/dp_5"
             android:focusable="auto"
             android:textSize="@dimen/dp_16"

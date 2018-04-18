@@ -48,7 +48,7 @@
             android:inputType="text"
             android:singleLine="true"
             android:textSize="@dimen/dp_14"
-            android:textColor="@color/colorbutton"
+            android:textColor="@color/colorGrey"
             android:background="@android:color/transparent"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
@@ -75,7 +75,7 @@
             android:background="@android:color/transparent"
             android:inputType="text"
             android:textSize="@dimen/dp_14"
-            android:textColor="@color/colorbutton"
+            android:textColor="@color/colorGrey"
             android:singleLine="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
@@ -97,20 +97,39 @@
         android:layout_marginTop="@dimen/dp_12"
         android:layout_height="38dp">
 
-        <com.hbb20.CountryCodePicker
+
+        <com.example.fluper.newsapp.appUtils.MyTextView
             android:layout_weight="1"
             android:layout_gravity="center"
             android:layout_width="50dp"
             android:layout_height="40dp"
-            android:layout_marginTop="1dp"
-            android:background="@null"
-            app:ccp_contentColor="@color/colorbutton"
-            app:ccp_showFlag="false"
-            app:ccp_showNameCode="false"
-            app:ccp_textSize="15sp">
+            android:text="+91"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/dp_14"
+            android:textColor="@color/colorGrey"
+            >
+            <!-- app:ccp_contentColor="@color/colorGrey"
+             app:ccp_showFlag="false"
+             app:ccp_showNameCode="false"
+             app:ccp_textSize="15sp"-->
 
-        </com.hbb20.CountryCodePicker>
+        </com.example.fluper.newsapp.appUtils.MyTextView>
 
+
+        <!--  <com.hbb20.CountryCodePicker
+              android:layout_weight="1"
+              android:layout_gravity="center"
+              android:layout_width="50dp"
+              android:layout_height="40dp"
+              android:layout_marginTop="1dp"
+              android:background="@null"
+              app:ccp_contentColor="@color/colorGrey"
+              app:ccp_showFlag="false"
+              app:ccp_showNameCode="false"
+              app:ccp_textSize="15sp">
+
+          </com.hbb20.CountryCodePicker>
+  -->
         <View
             android:layout_weight="1"
             android:layout_width="1dp"
@@ -138,7 +157,7 @@
             android:inputType="phone"
             android:textSize="14dp"
             android:maxLength="10"
-            android:textColor="@color/colorbutton"
+            android:textColor="@color/colorGrey"
             android:singleLine="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
@@ -187,7 +206,7 @@
             android:background="@android:color/transparent"
             android:inputType="text"
             android:drawableRight="@drawable/right_arrow"
-            android:textColor="@color/colorbutton"
+            android:textColor="@color/colorGrey"
             android:singleLine="true"
             android:textSize="@dimen/dp_14"
             android:layout_width="match_parent"

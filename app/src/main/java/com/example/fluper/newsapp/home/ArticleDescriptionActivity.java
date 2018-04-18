@@ -16,15 +16,16 @@ public class ArticleDescriptionActivity extends AppCompatActivity implements Vie
     //String myReallyLongText = "Bacon ipsum dolor amet porchetta venison ham fatback alcatra tri-tip, turducken strip steak sausage rump burgdoggen pork loin. Spare ribs filet mignon salami, strip steak ball tip shank frankfurter corned beef venison. Pig pork belly pork chop andouille. Porchetta pork belly ground round, filet mignon bresaola chuck swine shoulder leberkas jerky boudin. Landjaeger pork chop corned beef, tri-tip brisket rump pastrami flank";
     private ActivityArticleDescriptionBinding binding;
     private MyRecyclerAdapter mAdapter;
+    private MyHomeRecyclerAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
         //setContentView (R.layout.activity_article_description);
         binding = DataBindingUtil.setContentView (this,R.layout.activity_article_description);
-        mAdapter = new MyRecyclerAdapter (this);
+        adapter = new MyHomeRecyclerAdapter (this);
         binding.rvProductDescription.setLayoutManager (new GridLayoutManager (this,2));
-        binding.rvProductDescription.setAdapter (mAdapter);
+        binding.rvProductDescription.setAdapter (adapter);
         binding.backBtnDescription.setOnClickListener (this);
 
 

@@ -20,6 +20,7 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
 
     private ActivityHomePageBinding binding;
     MyRecyclerAdapter mMyRecyclerAdapter;
+    private MyHomeRecyclerAdapter adapterRectangle;
     @BindView( R.id.include_forgot_layout ) View toolLayout;
 
     @Override
@@ -39,7 +40,8 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
                 (this,LinearLayoutManager.HORIZONTAL,true));
         binding.homeRecyclerView.setAdapter (mMyRecyclerAdapter);
         binding.homeRecyclerVieww.setLayoutManager (new GridLayoutManager (this,2));
-        binding.homeRecyclerVieww.setAdapter (mMyRecyclerAdapter);
+        adapterRectangle = new MyHomeRecyclerAdapter (this);
+        binding.homeRecyclerVieww.setAdapter (adapterRectangle);
         binding.includeBottomLayout.ivProfile.setOnClickListener (this);
         binding.includeBottomLayout.ivHome.setOnClickListener (this);
         binding.includeBottomLayout.ivHome.setImageResource (R.drawable.bottom_home_ac);

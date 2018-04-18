@@ -60,12 +60,12 @@ public class CreateProfileActivity extends AppCompatActivity implements View.OnC
 
                     break;
                 }
-                else if(!Validation.isValidPassword (binding.mobileTextCreateProfile.getText ().toString ().trim ())){
+                /*else if(!Validation.isValidPassword (binding.mobileTextCreateProfile.getText ().toString ().trim ())){
                     binding.mobileTextCreateProfile.setEnabled (true);
                     binding.mobileTextCreateProfile.setError ("Please enter mobile number.");
 
                     break;
-                }
+                }*/
 
                 else if(!Validation.isValidPassword (binding.intrestTextCreateProfile.getText ().toString ().trim ())){
                     binding.intrestTextCreateProfile.setEnabled (true);

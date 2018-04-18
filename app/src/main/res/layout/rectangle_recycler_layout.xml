@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         android:layout_marginRight="@dimen/dp_10"
         android:layout_width="160dp"
         android:layout_height="210dp">
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_view_product"
-        app:cardCornerRadius="10dp"
-        android:layout_marginRight="@dimen/dp_12"
-        android:layout_width="match_parent"
-        android:layout_height="140dp" >
-
-        <ImageView
-            android:scaleType="fitXY"
-            android:id="@+id/home_product_image"
-            android:src="@drawable/details_img"
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view_product"
+            app:cardCornerRadius="10dp"
+            android:layout_marginRight="@dimen/dp_12"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </android.support.v7.widget.CardView>
+            android:layout_height="130dp" >
+
+            <ImageView
+                android:scaleType="fitXY"
+                android:id="@+id/home_product_image_rectangle"
+                android:src="@drawable/details_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.v7.widget.CardView>
         <TextView
             android:id="@+id/heading_text"
             android:layout_below="@+id/card_view_product"
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             />
-        </RelativeLayout>
+    </RelativeLayout>
 
 
 </LinearLayout>

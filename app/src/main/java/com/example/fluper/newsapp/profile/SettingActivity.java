@@ -28,6 +28,9 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
         binding.inludeToolSettting.headerToolText.setText ("Settings");
         binding.logout.setOnClickListener (this);
         binding.inludeToolSettting.headerBack.setOnClickListener (this);
+        binding.terms.setOnClickListener (this);
+        binding.aboutUs.setOnClickListener (this);
+        binding.privacyPolicy.setOnClickListener (this);
 
     }
 
@@ -40,6 +43,15 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
                 break;
             case R.id.header_back:
                 super.onBackPressed ();
+                break;
+            case R.id.terms:
+                startActivity (new Intent (this, TermsAndConditionActivity.class));
+                break;
+            case R.id.about_us:
+                startActivity (new Intent (this, AboutUsActivity.class));
+                break;
+            case R.id.privacy_Policy:
+                startActivity (new Intent (this, PrivacyPolicyActivity.class));
                 break;
         }
     }

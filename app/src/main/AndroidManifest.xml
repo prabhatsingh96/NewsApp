@@ -20,51 +20,43 @@
         </activity>
         <activity
             android:name=".authentication.HomeActivity"
-            android:theme="@style/splashScreen"
-             />
+            android:theme="@style/splashScreen" />
         <activity
             android:name=".authentication.ForgotActivity"
-            android:theme="@style/splashScreen"
-             />
+            android:theme="@style/splashScreen" />
         <activity
             android:name=".authentication.OtpActivity"
-            android:theme="@style/splashScreen"
-             />
+            android:theme="@style/splashScreen" />
         <activity
             android:name=".profile.CreateProfileActivity"
-            android:theme="@style/splashScreen"
-             />
+            android:theme="@style/splashScreen" />
         <activity
             android:name=".profile.EditProfileActivity"
-            android:theme="@style/splashScreen"
-             />
+            android:theme="@style/splashScreen" />
         <activity
             android:name=".profile.ProfileActivity"
-            android:theme="@style/splashScreen"
-             />
+            android:theme="@style/splashScreen" />
         <activity
             android:name=".profile.ChooseCategroyActivity"
-            android:theme="@style/splashScreen"
-             />
+            android:theme="@style/splashScreen" />
         <activity
             android:name=".profile.SettingActivity"
-            android:theme="@style/splashScreen"
-             />
+            android:theme="@style/splashScreen" />
         <activity
             android:name=".home.HomePageActivity"
-            android:theme="@style/splashScreen"
-             />
+            android:theme="@style/splashScreen" />
         <activity
             android:name=".home.ArticleDescriptionActivity"
-            android:theme="@style/splashScreen"
-             />
+            android:theme="@style/splashScreen" />
         <activity
             android:name=".authentication.ResetPasswordActivity"
-            android:theme="@style/splashScreen"
-            />
-        <activity android:name=".authentication.ChangePasswordActivity"
-            android:theme="@style/splashScreen"
-            ></activity>
+            android:theme="@style/splashScreen" />
+        <activity
+            android:name=".authentication.ChangePasswordActivity"
+            android:theme="@style/splashScreen" />
+        <activity android:name=".profile.AboutUsActivity" />
+        <activity android:name=".profile.PrivacyPolicyActivity" />
+        <activity android:name=".profile.TermsAndConditionActivity"></activity>
     </application>
 
 </manifest>
