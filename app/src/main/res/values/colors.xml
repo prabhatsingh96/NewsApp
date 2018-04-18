@@ -8,7 +8,8 @@
     <color name="colorPurple">#009899</color>
     <color name="colorPink">#aaaaaa</color>
     <color name="colorbutton">#11998f</color>
-    <color name="colorGreen">#31dc83</color>
+    <color name="colborGreen">#31dc83</color>
+    <color name="colorGrey">#808080</color>
 
 
 </resources>

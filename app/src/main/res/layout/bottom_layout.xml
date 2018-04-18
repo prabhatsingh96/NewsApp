@@ -116,7 +116,7 @@
             android:textColor="@color/colorPrimary"
             android:textSize="13dp"
             android:layout_marginRight="@dimen/dp_20"
-            android:layout_marginLeft="@dimen/dp_27"
+            android:layout_marginLeft="@dimen/dp_25"
             android:layout_marginBottom="6dp"
             android:layout_toRightOf="@+id/iv_saved"
             android:layout_marginTop="2dp"

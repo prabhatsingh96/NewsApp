@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/bottom_home_ac"
+        android:title="HOME" />
+
+    <item
+        android:id="@+id/navigation_search"
+        android:icon="@drawable/bottom_search_ac"
+        android:title="SEARCH" />
+
+    <item
+        android:id="@+id/bookmark"
+        android:icon="@drawable/bottom_bookmark_ac"
+        android:title="BOOKMARK" />
+
+    <item
+        android:id="@+id/navigation_saved"
+        android:icon="@drawable/bottom_download_de"
+        android:title="SAVED" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/bottom_profile_de"
+        android:title="PROFILE" />
+
+</menu>

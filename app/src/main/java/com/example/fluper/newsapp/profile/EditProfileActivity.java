@@ -31,6 +31,7 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         ButterKnife.bind( includeForgotLayout, toolLayout );
         binding.inludeCreateToolLayout.headerToolText.setText ("Edit Profile");
         binding.inludeCreateToolLayout.headerBack.setOnClickListener (this);
+        binding.saveBtn.setOnClickListener (this);
         
 
     }
