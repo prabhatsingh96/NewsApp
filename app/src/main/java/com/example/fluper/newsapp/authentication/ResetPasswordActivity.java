@@ -33,7 +33,7 @@ public class ResetPasswordActivity extends AppCompatActivity implements View.OnC
     public void onClick(View v) {
         switch (v.getId ()){
             case R.id.header_back:
-                super.onBackPressed ();
+                startActivity(new Intent (this, HomeActivity.class));
                 break;
             case R.id.submit_password:
                 if (!Validation.isValidPassword (binding.newPassword.getText ().toString ())) {

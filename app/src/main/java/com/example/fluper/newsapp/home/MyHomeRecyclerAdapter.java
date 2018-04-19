@@ -43,10 +43,10 @@ public class MyHomeRecyclerAdapter extends RecyclerView.Adapter<MyHomeRecyclerAd
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         holder.homeProductImage.setImageResource (R.drawable.related_img);
+        /*holder.homeProductImage.setImageResource (R.drawable.related_img);
+        holder.homeProductImage.setImageResource (R.drawable.related_img);
         holder.homeProductImage.setImageResource (R.drawable.details_img);
-        holder.homeProductImage.setImageResource (R.drawable.details_img);
-        holder.homeProductImage.setImageResource (R.drawable.details_img);
-        holder.homeProductImage.setImageResource (R.drawable.details_img);
+        holder.homeProductImage.setImageResource (R.drawable.details_img);*/
 
     }
 

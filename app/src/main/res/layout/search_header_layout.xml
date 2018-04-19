@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/shadow"
+    android:elevation="@dimen/dp_12"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55">
+
+        <ImageView
+            android:id="@+id/video_logo"
+            android:src="@drawable/logo_sm"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginBottom="3dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+
+        <ImageView
+            android:id="@+id/notification_icon"
+            android:src="@drawable/notification"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30" />
+
+
+        <ImageView
+            android:id="@+id/filter_icon"
+            android:src="@drawable/filter"
+            android:layout_toLeftOf="@+id/notification_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_6"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30" />
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

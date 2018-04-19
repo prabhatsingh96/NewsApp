@@ -55,9 +55,9 @@ public class LogInFragment extends Fragment implements View.OnClickListener{
 
                          break;
                 }
-                else if(!Validation.isValidPassword (binding.loginPasswordd.getText ().toString ())) {
-                         binding.loginPassword.setEnabled (true);
-                         binding.loginPassword.setError ("Please enter password.");
+                else if(!Validation.isValidPassword (binding.loginPasswordd.getText ().toString ().trim ())) {
+                         binding.loginPasswordd.setEnabled (true);
+                         binding.loginPasswordd.setError ("Please enter password.");
 
                          break;
                 }

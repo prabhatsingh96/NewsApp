@@ -19,7 +19,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".authentication.HomeActivity"
+
+
+        android:name=".authentication.HomeActivity"
             android:theme="@style/splashScreen" />
         <activity
             android:name=".authentication.ForgotActivity"
@@ -54,9 +56,19 @@
         <activity
             android:name=".authentication.ChangePasswordActivity"
             android:theme="@style/splashScreen" />
-        <activity android:name=".profile.AboutUsActivity" />
-        <activity android:name=".profile.PrivacyPolicyActivity" />
-        <activity android:name=".profile.TermsAndConditionActivity"></activity>
+        <activity
+            android:name=".profile.AboutUsActivity"
+            android:theme="@style/splashScreen" />
+        <activity
+            android:name=".profile.PrivacyPolicyActivity"
+            android:theme="@style/splashScreen" />
+        <activity
+            android:name=".profile.TermsAndConditionActivity"
+            android:theme="@style/splashScreen" />
+        <activity
+            android:name=".home.BookMarksActivity"
+            android:theme="@style/splashScreen" />
+        <activity android:name=".home.SearchActivity"></activity>
     </application>
 
 </manifest>

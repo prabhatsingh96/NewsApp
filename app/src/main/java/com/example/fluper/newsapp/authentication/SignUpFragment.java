@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.fluper.newsapp.R;
 import com.example.fluper.newsapp.appUtils.Validation;
@@ -58,13 +59,16 @@ public class SignUpFragment extends Fragment implements View.OnClickListener{
                 }
                 else if(!Validation.isValidPassword (binding.cPasswordSignup.getText ().toString ())) {
                     binding.cPasswordSignup.setEnabled (true);
-                    binding.cPasswordSignup.setError ("Please enter confirm password");
+                    //binding.cPasswordSignup.setError ("Please enter confirm password");
+                    Toast.makeText (getContext (), "Please enter confirm password", Toast.LENGTH_SHORT).show ();
                     break;
                 } else if(!(binding.passwordSignup.getText ().toString ().trim ().equals
                         (binding.cPasswordSignup.getText ().toString ().trim ()))) {
                     binding.cPasswordSignup.setEnabled (true);
-                    binding.cPasswordSignup.setError (" Password are not matched");
-
+                    Toast.makeText (getContext (), "Password do not matched.", Toast.LENGTH_SHORT).show ();
+                   /* binding.cPasswordSignup.setError (" Password are not matched");
+                    binding.cPasswordSignup.requestFocus(binding.cPasswordSignup.length());
+*/
                 }
 
                 else {

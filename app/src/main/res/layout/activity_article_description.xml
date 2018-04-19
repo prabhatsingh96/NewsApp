@@ -113,7 +113,7 @@
                     android:layout_below="@+id/heading_text"
                     android:layout_marginLeft="@dimen/dp_20"
                     android:layout_marginTop="5dp"
-                    android:text="USA English January 20, 2018"
+                    android:text="USA, English, January 20, 2018"
                     android:textColor="@color/colorPink"
                     android:textSize="13dp" />
 
@@ -217,11 +217,21 @@
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="16dp" />
 
+                <View
+                    android:id="@+id/buynow_view"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:layout_below="@+id/buynow_btn"
+                    android:layout_width="match_parent"
+                    android:background="@color/colorPink"
+                    android:layout_height="1dp"></View>
+
                 <TextView
                     android:id="@+id/releted_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/buynow_btn"
+                    android:layout_below="@+id/buynow_view"
                     android:layout_marginLeft="@dimen/dp_20"
                     android:layout_marginRight="@dimen/dp_120"
                     android:layout_marginTop="16dp"

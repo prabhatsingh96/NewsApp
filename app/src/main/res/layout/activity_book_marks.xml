@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fluper.newsapp.home.BookMarksActivity">
+
+    <include layout="@layout/header_layout"
+        android:id="@+id/include_bookmarks_header"></include>
+    <include layout="@layout/bottom_layout"
+        android:id="@+id/include_bookmarks_bottom"></include>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/bookmarks_recycle_view"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_below="@+id/include_bookmarks_header"
+        android:layout_marginBottom="@dimen/dp_70"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
+</layout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<LinearLayout
+    android:id="@+id/book_lay_linear"
+    android:layout_marginTop="@dimen/dp_18"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_width="160dp"
+        android:layout_height="130dp">
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view_product"
+            app:cardCornerRadius="10dp"
+            android:layout_marginRight="@dimen/dp_12"
+            android:layout_width="match_parent"
+            android:layout_height="130dp" >
+
+            <ImageView
+                android:scaleType="fitXY"
+                android:id="@+id/home_product_image_bookmark"
+                android:src="@drawable/details_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+      <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+          <TextView
+              android:id="@+id/heading_text"
+              android:text="The Page"
+              android:textColor="@color/colorPrimary"
+              android:textSize="21dp"
+              android:textStyle="bold"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" />
+
+          <com.example.fluper.newsapp.appUtils.MyTextView
+              android:id="@+id/heading_text_desc"
+              android:layout_below="@+id/heading_text"
+              android:text="Law and order,"
+              android:textColor="@color/colorPrimary"
+              android:textSize="14dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" />
+
+          <com.example.fluper.newsapp.appUtils.MyTextView
+              android:id="@+id/heading_text_dscp"
+              android:layout_below="@+id/heading_text_desc"
+              android:text="Lorem ipsum copsum"
+              android:textColor="@color/colorPrimary"
+              android:textSize="14dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="5dp"
+              />
+          <TextView
+              android:id="@+id/count"
+              android:layout_below="@+id/heading_text_dscp"
+              android:text="13"
+              android:textColor="@color/colorPrimary"
+              android:drawableLeft="@drawable/bottom_bookmark_ac"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" />
+          <TextView
+              android:layout_marginTop="113dp"
+              android:text="January 20, 2018"
+              android:textColor="@color/colorGrey"
+              android:textSize="12dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" />
+
+      </RelativeLayout>
+</LinearLayout>
+    <View
+        android:layout_below="@+id/book_lay_linear"
+        android:layout_marginTop="18dp"
+        android:background="@color/colorPink"
+        android:alpha=".6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></View>
+
+    </RelativeLayout>
+</layout>

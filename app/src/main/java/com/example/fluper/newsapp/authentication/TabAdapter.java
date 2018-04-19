@@ -1,5 +1,6 @@
 package com.example.fluper.newsapp.authentication;
 
+import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -24,6 +25,9 @@ public class TabAdapter extends FragmentPagerAdapter {
             fragmentArrayList.add(f);
             titleList.add(tabTitle);
         }
+
+
+
 
         @Override
         public Fragment getItem(int position) {

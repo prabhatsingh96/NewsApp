@@ -1,0 +1,98 @@
+<layout  xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fluper.newsapp.home.HomePageFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_tool_home"
+        android:layout_marginBottom="6dp">
+
+        <RelativeLayout
+            android:layout_marginBottom="@dimen/dp_65"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/article_featured_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/dp_14"
+                android:text="Featured Article"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/dp_22"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/home_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/article_featured_text"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="8dp"
+                android:nestedScrollingEnabled="false"
+                android:orientation="horizontal">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <View
+                android:id="@+id/view_recycler_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/home_recycler_view"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorPink"></View>
+
+            <TextView
+                android:id="@+id/article_featured_textt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_recycler_line"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/dp_12"
+                android:text="Featured Article"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/dp_22"
+                android:textStyle="bold" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/home_recycler_vieww"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/article_featured_textt"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="8dp"
+                android:nestedScrollingEnabled="false"
+                android:orientation="horizontal">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <Button
+                android:id="@+id/btn_see_all"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/home_recycler_vieww"
+                android:layout_marginBottom="70dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/sign_up_custom_layout"
+                android:text="See All"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPurple"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
+</layout>

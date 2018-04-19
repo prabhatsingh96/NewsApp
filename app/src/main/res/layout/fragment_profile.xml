@@ -1,0 +1,168 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fluper.newsapp.home.ProfileFragment">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="@dimen/dp_25"
+        android:src="@drawable/dummy_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_toLeftOf="@+id/profile_image"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginTop="30dp"
+        android:textSize="19dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:text="Ronal Crew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.example.fluper.newsapp.appUtils.MyTextView
+        android:id="@+id/user_email"
+        android:layout_toLeftOf="@+id/profile_image"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:textSize="14dp"
+        android:textColor="@color/colorPrimary"
+        android:text="ronal@gmail.com"
+        android:layout_below="@+id/user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.example.fluper.newsapp.appUtils.MyTextView
+        android:id="@+id/edit_profile"
+        android:layout_toLeftOf="@+id/profile_image"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:textSize="15dp"
+        android:textColor="@color/colorGrey"
+        android:text="Edit Profile"
+        android:layout_below="@+id/user_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/profile_layout_detail"
+        android:orientation="vertical"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@id/profile_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPink"
+            android:alpha=".6"></View>
+
+        <RelativeLayout
+            android:id="@+id/rel_layout_mode"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.example.fluper.newsapp.appUtils.MyTextView
+                android:id="@+id/mode"
+                android:text="Night Mode"
+                android:textSize="16dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <View
+            android:id="@+id/view_mode"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPink"
+            android:alpha=".6"></View>
+
+        <com.example.fluper.newsapp.appUtils.MyTextView
+            android:id="@+id/payments"
+            android:text="Payments"
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/dp_6"
+            android:drawableRight="@drawable/payment"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:id="@+id/view_payments"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPink"
+            android:alpha=".6"></View>
+
+        <com.example.fluper.newsapp.appUtils.MyTextView
+            android:id="@+id/restore_purchase"
+            android:text="Restore Purchase"
+            android:textSize="16dp"
+            android:layout_marginRight="@dimen/dp_6"
+            android:drawableRight="@drawable/restore"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:id="@+id/view_restore_purchase"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPink"
+            android:alpha=".6"></View>
+
+        <com.example.fluper.newsapp.appUtils.MyTextView
+            android:id="@+id/Invite"
+            android:text="Invite &amp; Earns"
+            android:textSize="16dp"
+            android:layout_marginRight="@dimen/dp_6"
+            android:drawableRight="@drawable/gift"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:id="@+id/view_invite"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPink"
+            android:alpha=".6"></View>
+        <com.example.fluper.newsapp.appUtils.MyTextView
+            android:id="@+id/settig"
+            android:text="Settings"
+            android:textSize="16dp"
+            android:clickable="true"
+            android:layout_marginRight="@dimen/dp_6"
+            android:layout_marginTop="10dp"
+            android:drawableRight="@drawable/settings"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:id="@+id/view_setting"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPink"
+            android:alpha=".6"></View>
+    </LinearLayout>
+
+</RelativeLayout>
+</layout>

@@ -48,6 +48,7 @@
             android:inputType="text"
             android:singleLine="true"
             android:textSize="@dimen/dp_14"
+            android:paddingTop="@dimen/dp_4"
             android:textColor="@color/colorGrey"
             android:background="@android:color/transparent"
             android:layout_width="match_parent"
@@ -75,6 +76,7 @@
             android:background="@android:color/transparent"
             android:inputType="text"
             android:textSize="@dimen/dp_14"
+            android:paddingTop="@dimen/dp_4"
             android:textColor="@color/colorGrey"
             android:singleLine="true"
             android:layout_width="match_parent"
@@ -104,7 +106,7 @@
             android:layout_width="50dp"
             android:layout_height="40dp"
             android:text="+91"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="13dp"
             android:textSize="@dimen/dp_14"
             android:textColor="@color/colorGrey"
             >
@@ -133,8 +135,9 @@
         <View
             android:layout_weight="1"
             android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="@color/colorPink"
+            android:layout_marginTop="12dp"
+            android:layout_height="20dp"
+            android:background="@color/colorGrey"
             />
     </LinearLayout>
 
@@ -143,7 +146,7 @@
         android:id="@+id/mobile_create_profile"
         android:layout_below="@+id/email_id_create_profile"
         android:hint="Mobile Number(optional)"
-        android:layout_marginLeft="4dp"
+        android:layout_marginLeft="6dp"
         android:layout_marginTop="@dimen/dp_10"
         android:layout_marginRight="@dimen/dp_30"
         android:layout_width="match_parent"
@@ -157,6 +160,7 @@
             android:inputType="phone"
             android:textSize="14dp"
             android:maxLength="10"
+            android:paddingTop="@dimen/dp_4"
             android:textColor="@color/colorGrey"
             android:singleLine="true"
             android:layout_width="match_parent"
@@ -195,6 +199,7 @@
         android:id="@+id/intrest_create_profile"
         android:layout_below="@+id/view_mobile"
         android:hint="Interest"
+        android:text="Relationship,Lifestyle,Tech"
         android:layout_marginLeft="@dimen/dp_30"
         android:layout_marginTop="@dimen/dp_10"
         android:layout_marginRight="30dp"
@@ -208,6 +213,7 @@
             android:drawableRight="@drawable/right_arrow"
             android:textColor="@color/colorGrey"
             android:singleLine="true"
+            android:paddingTop="@dimen/dp_4"
             android:textSize="@dimen/dp_14"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
@@ -224,7 +230,7 @@
          android:layout_below="@+id/intrest_create_profile"
          android:text="Change Password"
          android:textSize="18dp"
-         android:textColor="@color/colorPrimary"
+         android:textColor="@color/colorGrey"
          android:layout_marginTop="12dp"
          android:layout_marginRight="30dp"
          android:layout_marginLeft="30dp"

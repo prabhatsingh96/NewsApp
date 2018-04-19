@@ -1,0 +1,32 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fluper.newsapp.home.SearchFragment">
+
+    <com.example.fluper.newsapp.appUtils.MyEditText
+        android:id="@+id/search_box"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:padding="@dimen/dp_20"
+        android:hint="Search magzines here..."
+        android:background="@drawable/search_box_drawable_layout"
+        android:drawableRight="@drawable/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/search_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_box"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="@dimen/dp_65"
+        android:nestedScrollingEnabled="false"
+        android:orientation="horizontal" />
+
+</RelativeLayout>
+</layout>

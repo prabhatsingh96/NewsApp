@@ -18,12 +18,13 @@
             android:layout_marginLeft="@dimen/dp_5"
             android:layout_width="@dimen/dp_40"
             android:layout_height="@dimen/dp_40" />
-        <com.example.fluper.newsapp.appUtils.MyTextView
+        <TextView
             android:id="@+id/header_tool_text"
             android:text="Forgot Password"
             android:layout_centerInParent="true"
-            android:textSize="@dimen/dp_20"
-            android:textColor="@color/colorblack"
+            android:textStyle="bold"
+            android:textSize="@dimen/dp_19"
+            android:textColor="@color/colorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
