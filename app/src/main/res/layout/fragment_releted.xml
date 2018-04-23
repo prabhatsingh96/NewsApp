@@ -1,0 +1,61 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/intro_background"
+        android:background="@color/colorPrimary"
+        android:alpha=".9"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.fluper.newsapp.home.ReletedFragment">
+        <!--
+           <me.relex.circleindicator.CircleIndicator
+               android:id="@+id/indicator"
+               android:layout_width="match_parent"
+               android:layout_height="48dp"/>-->
+
+        <RelativeLayout
+            android:id="@+id/rleted_search_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="100dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_relted_searchh_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Related Search"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_cancel_releted_serch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_30"
+                android:src="@drawable/cancel"
+                android:tint="@color/colorPrimaryDark" />
+
+
+        </RelativeLayout>
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/releted_search_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@+id/rleted_search_layout"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_8"
+            android:paddingEnd="0dp"
+            android:paddingLeft="0dp">
+
+        </android.support.v4.view.ViewPager>
+
+
+    </RelativeLayout>
+</layout>

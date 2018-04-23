@@ -11,6 +11,16 @@
             android:id="@+id/include_tool_home"
             layout="@layout/header_layout"></include>
 
+
+        <RelativeLayout
+            android:id="@+id/home_fragment_container"
+            android:layout_below="@+id/include_tool_home"
+            android:layout_marginBottom="@dimen/dp_65"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </RelativeLayout>
+
 <!--
 
         <android.support.v4.view.ViewPager
@@ -45,7 +55,7 @@
 
 
 
-          <ScrollView
+       <!--   <ScrollView
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:layout_below="@+id/include_tool_home"
@@ -132,7 +142,7 @@
 
               </RelativeLayout>
           </ScrollView>
-
+-->
         <include
             android:id="@+id/include_bottom_layout"
             layout="@layout/bottom_layout"></include>
@@ -151,31 +161,23 @@
                android:layout_height="50dp" />
 
 -->
-       <!-- <RelativeLayout
-            android:id="@+id/home_fragment_container"
-            android:layout_below="@+id/include_tool_home"
-            android:layout_marginBottom="@dimen/dp_60"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
-        </RelativeLayout>
+        <!--
 
+                <android.support.design.widget.BottomNavigationView
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/navigation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/colorPrimaryDark"
+                    app:itemBackground="@color/colorPrimaryDark"
+                    android:scrollIndicators="top"
+                    app:itemIconTint="@color/colorPurple"
+                    app:itemTextColor="@color/colorPurple"
+                    app:menu="@menu/navigation" />
 
-
-        <android.support.design.widget.BottomNavigationView
-            android:layout_alignParentBottom="true"
-            android:id="@+id/navigation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:background="@color/colorPrimaryDark"
-            app:itemBackground="@color/colorPrimaryDark"
-            android:scrollIndicators="top"
-            app:itemIconTint="@color/colorPurple"
-            app:itemTextColor="@color/colorPurple"
-            app:menu="@menu/navigation" />
-
--->
+        -->
 
 
     </RelativeLayout>

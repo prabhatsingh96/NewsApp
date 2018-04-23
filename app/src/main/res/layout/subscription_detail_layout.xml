@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    android:background="@android:color/transparent"
+    android:layout_alignParentBottom="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+
+            android:id="@+id/detail_text_subscription_details"
+            android:background="@color/colorPrimaryDark"
+            android:alpha=".9"
+            android:text="Details"
+            android:textColor="@color/colorPrimary"
+        android:layout_marginLeft="@dimen/dp_10"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_width="match_parent"
+          android:layout_height="30dp" />
+
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_details"
+        android:layout_below="@+id/detail_text_subscription_details"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+  <!--  <ImageView
+        android:id="@+id/bb"
+        android:layout_below="@+id/detail_text_subscription_details"
+        android:background="@drawable/black_oval_bubble_layout"
+        android:layout_marginTop="5dp"
+        android:layout_width="8dp"
+        android:layout_height="8dp" />
+           <TextView
+               android:background="@color/colorPrimaryDark"
+               android:id="@+id/text_details_subscription"
+               android:layout_toRightOf="@+id/bb"
+               android:textColor="@color/colorPrimary"
+               android:textSize="14dp"
+               android:layout_marginLeft="4dp"
+               android:text="Lorem ipsum icsum dolor sit amet,Lorem ipsum icsum dolor sit amet, Lorem ipsum icsum dolor sit amet"
+               android:layout_below="@+id/detail_text_subscription_details"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+         </TextView>-->
+
+</RelativeLayout>
+</layout>

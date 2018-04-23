@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_round"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -19,9 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-
-
-        android:name=".authentication.HomeActivity"
+            android:name=".authentication.HomeActivity"
             android:theme="@style/splashScreen" />
         <activity
             android:name=".authentication.ForgotActivity"
@@ -34,9 +32,6 @@
             android:theme="@style/splashScreen" />
         <activity
             android:name=".profile.EditProfileActivity"
-            android:theme="@style/splashScreen" />
-        <activity
-            android:name=".profile.ProfileActivity"
             android:theme="@style/splashScreen" />
         <activity
             android:name=".profile.ChooseCategroyActivity"
@@ -66,9 +61,17 @@
             android:name=".profile.TermsAndConditionActivity"
             android:theme="@style/splashScreen" />
         <activity
-            android:name=".home.BookMarksActivity"
+            android:name=".home.SaveArticleDiscription"
             android:theme="@style/splashScreen" />
-        <activity android:name=".home.SearchActivity"></activity>
+        <activity
+            android:name=".home.NotificationActivity"
+            android:theme="@style/splashScreen" />
+        <activity
+            android:name=".payment.PaymentActivity"
+            android:theme="@style/splashScreen" />
+        <activity android:name=".subscription.SubscriptionActivity"
+            android:theme="@style/splashScreen"
+            ></activity>
     </application>
 
 </manifest>

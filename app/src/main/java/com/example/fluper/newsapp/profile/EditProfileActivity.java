@@ -81,7 +81,7 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
                     break;
                 }
                 else{
-                    startActivity (new Intent (this, ProfileActivity.class));
+                    super.onBackPressed ();
                     binding.fullNameTextCreateProfilee.setText ("");
                     binding.emailTextCreateProfilee.setText ("");
                     binding.mobileTextCreateProfilee.setText ("");

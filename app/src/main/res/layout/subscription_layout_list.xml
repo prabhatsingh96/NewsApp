@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="230dp">
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:background="@drawable/subscribe_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/copoun_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_20"
+                android:src="@drawable/coupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/coupon_text"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16dp"
+                android:layout_marginTop="5dp"
+                android:text="By all upgrade at once and receive a nice discount right away?"
+                android:gravity="center"
+                android:layout_below="@+id/copoun_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/discount_layout"
+                android:layout_below="@+id/coupon_text"
+                android:layout_marginLeft="@dimen/dp_110"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/discount_price_subscription"
+                android:text="$5.00"
+                android:textSize="@dimen/dp_14"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:id="@+id/discount_text_subscription"
+                android:layout_toRightOf="@+id/discount_price_subscription"
+                android:text="50% Discount"
+                android:layout_marginLeft="@dimen/dp_14"
+                android:textSize="@dimen/dp_16"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_below="@+id/discount_layout"
+                android:weightSum="3"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/dp_50"
+                android:layout_marginRight="@dimen/dp_35"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/view_detail_subscription"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/dp_16"
+                    android:textStyle="bold"
+                    android:text="View Details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+               <RelativeLayout
+                   android:layout_weight="1"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+                   <View
+                       android:background="@color/colorPrimaryDark"
+                       android:layout_width="1dp"
+                       android:layout_height="20dp"></View>
+
+               </RelativeLayout>
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/dp_16"
+                    android:textStyle="bold"
+                    android:text="Buy $2.29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+</RelativeLayout>
+</layout>

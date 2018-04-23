@@ -52,7 +52,7 @@ public class MyHomeRecyclerAdapter extends RecyclerView.Adapter<MyHomeRecyclerAd
 
     @Override
     public int getItemCount() {
-        return 2;
+        return 8;
     }
 
     @Override

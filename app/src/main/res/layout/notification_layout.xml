@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/heading_text_notification"
+        android:textSize="@dimen/dp_20"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:text="Heading"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/notification_time"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_16"
+        android:textSize="@dimen/dp_12"
+        android:textColor="@color/colorPink"
+        android:text="03:03Pm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+  </RelativeLayout>
+
+
+  <TextView
+      android:id="@+id/notification_text_notification"
+      android:textSize="@dimen/dp_16"
+      android:textColor="@color/colorPrimary"
+      android:layout_marginTop="3dp"
+      android:text="Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet. "
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+
+  <View
+      android:background="@color/colorPink"
+      android:alpha=".6"
+      android:layout_marginTop="@dimen/dp_7"
+      android:layout_marginRight="@dimen/dp_12"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"></View>
+
+</LinearLayout>
+</layout>

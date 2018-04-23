@@ -1,16 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 <RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.fluper.newsapp.home.SavedFragment">
+    tools:context="com.example.fluper.newsapp.subscription.SubscriptionActivity">
 
+    <include layout="@layout/header_tool_layout"
+        android:id="@+id/include_tool_subscription"></include>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/saved_recycle_view"
-        android:layout_marginRight="@dimen/dp_20"
+        android:id="@+id/subscriptionRecycler_list"
+        android:layout_below="@+id/include_tool_subscription"
         android:layout_marginLeft="@dimen/dp_20"
-        android:layout_marginBottom="@dimen/dp_70"
+        android:layout_marginRight="@dimen/dp_20"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 

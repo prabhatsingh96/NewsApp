@@ -1,5 +1,6 @@
 package com.example.fluper.newsapp.home;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.widget.Toast;
 
 import com.example.fluper.newsapp.R;
 import com.example.fluper.newsapp.databinding.ActivityArticleDescriptionBinding;
+import com.example.fluper.newsapp.subscription.SubscriptionActivity;
 
 public class ArticleDescriptionActivity extends AppCompatActivity implements View.OnClickListener{
     public static final int MAX_LINES = 3;
@@ -27,17 +29,23 @@ public class ArticleDescriptionActivity extends AppCompatActivity implements Vie
         binding.rvProductDescription.setLayoutManager (new GridLayoutManager (this,2));
         binding.rvProductDescription.setAdapter (adapter);
         binding.backBtnDescription.setOnClickListener (this);
+        binding.subcribreLayout.setOnClickListener (this);
 
 
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId ()){
+        switch (v.getId ()) {
             case R.id.back_btn_description:
                 super.onBackPressed ();
                 break;
+
+            case R.id.subcribre_layout:
+                startActivity (new Intent (this, SubscriptionActivity.class));
+                break;
         }
+
     }
 
 

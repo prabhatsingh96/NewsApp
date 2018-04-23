@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<!--<LinearLayout
+
+    android:id="@+id/payment_linear_layout"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">-->
+
+    <TextView
+
+        android:id="@+id/card_detail_text"
+        android:text="Axis 2012 **** **** **** 3456"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_50"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RadioButton
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dp_16"
+        android:id="@+id/radio_button_payment"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginRight="@dimen/dp_2"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+<!--</LinearLayout>-->
+    <View
+        android:layout_below="@+id/card_detail_text"
+        android:background="@color/colorPink"
+        android:alpha=".6"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></View>
+    </RelativeLayout>
+</layout>
