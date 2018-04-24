@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/sort_by_text"
+        android:text="Sort By"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:padding="@dimen/dp_18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:background="@color/colorPink"
+        android:alpha=".6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></View>
+
+    <TextView
+        android:id="@+id/by_date_text"
+        android:text="By Date"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16dp"
+        android:padding="@dimen/dp_18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:background="@color/colorPink"
+        android:alpha=".6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></View>
+
+
+    <TextView
+        android:id="@+id/by_publication_text"
+        android:text="By Publication"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16dp"
+        android:padding="@dimen/dp_18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:background="@color/colorPink"
+        android:alpha=".6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></View>
+
+
+</LinearLayout>

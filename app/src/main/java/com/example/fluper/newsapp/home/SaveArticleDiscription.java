@@ -1,6 +1,9 @@
 package com.example.fluper.newsapp.home;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.design.widget.BottomSheetDialog;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -11,9 +14,11 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.TextView;
 
 import com.example.fluper.newsapp.R;
 import com.example.fluper.newsapp.databinding.ActivityTryForFreeBinding;
+import com.example.fluper.newsapp.subscription.ArticleNameReadMoreActivity;
 import com.example.fluper.newsapp.subscription.SubscriptionDetailsRecyclerLayout;
 
 public class SaveArticleDiscription extends AppCompatActivity implements View.OnClickListener {
@@ -67,23 +72,23 @@ public class SaveArticleDiscription extends AppCompatActivity implements View.On
 
 
     public void showTryForFreeDialog(){
+        final Intent intent = new Intent (this, ArticleNameReadMoreActivity.class);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
             LayoutInflater inflater = (LayoutInflater)this.getSystemService(LAYOUT_INFLATER_SERVICE);
             View view1 = inflater.inflate(R.layout.try_for_free_dialog_layout, null);
-          /*  RecyclerView rv = view1.findViewById (R.id.list_details);
-            rv.setLayoutManager (new LinearLayoutManager (this));
-            SubscriptionDetailsRecyclerLayout sra = new SubscriptionDetailsRecyclerLayout (this);
-            rv.setAdapter (sra);*/
-
-
-           /* BottomSheetDialog dialog = new BottomSheetDialog(this); dialog.setContentView(view1);
-
-            dialog.show();*/
+            TextView continuetv = view1.findViewById (R.id.continue_tv);
+            continuetv.setOnClickListener (new View.OnClickListener () {
+                @Override
+                public void onClick(View view) {
+                    startActivity (intent);
+                    alertDialog.dismiss ();
+                }
+            });
 
         builder.setView(view1);
         alertDialog = builder.create();
-        //alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable (Color.TRANSPARENT));
         alertDialog.show();
         }
 

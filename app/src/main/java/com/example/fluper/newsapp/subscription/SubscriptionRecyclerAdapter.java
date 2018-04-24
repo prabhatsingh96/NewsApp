@@ -1,6 +1,7 @@
 package com.example.fluper.newsapp.subscription;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.fluper.newsapp.R;
+import com.example.fluper.newsapp.home.HomePageActivity;
+import com.example.fluper.newsapp.payment.PaymentInfoActivity;
 
 import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 
@@ -37,6 +40,7 @@ public class SubscriptionRecyclerAdapter extends RecyclerView.Adapter<Subscripti
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
       holder.viewDetail.setOnClickListener (this);
+      holder.buyArticle.setOnClickListener (this);
     }
 
     @Override
@@ -49,8 +53,9 @@ public class SubscriptionRecyclerAdapter extends RecyclerView.Adapter<Subscripti
         switch (view.getId ()){
             case R.id.view_detail_subscription:
                 context.dialogOpen ();
-               // showShareOppDialog ();
-
+                break;
+            case R.id.buy_article:
+                context.startActivity (new Intent (context, PaymentInfoActivity.class));
                 break;
         }
     }
@@ -58,37 +63,14 @@ public class SubscriptionRecyclerAdapter extends RecyclerView.Adapter<Subscripti
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
         TextView viewDetail;
+        TextView buyArticle;
         public MyViewHolder(View itemView) {
             super (itemView);
             viewDetail =itemView.findViewById (R.id.view_detail_subscription);
+            buyArticle = itemView.findViewById (R.id.buy_article);
 
 
         }
     }
 
-
-  /*  public void showShareOppDialog(){
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-
-        LayoutInflater inflater = (LayoutInflater)context.getSystemService(LAYOUT_INFLATER_SERVICE);
-        View view1 = inflater.inflate(R.layout.subscription_detail_layout, null);
-
-
-
-
-        RecyclerView rv = view1.findViewById (R.id.list_details);
-        rv.setLayoutManager (new LinearLayoutManager (context));
-        SubscriptionRecyclerAdapter sra = new SubscriptionRecyclerAdapter (context);
-        rv.setAdapter (sra);
-
-
-
-        builder.setView(view1);
-        alertDialog = builder.create();
-        //alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        alertDialog.show();
-
-
-    }*/
 }

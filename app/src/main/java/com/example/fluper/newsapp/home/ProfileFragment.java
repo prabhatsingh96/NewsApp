@@ -12,6 +12,7 @@ import com.example.fluper.newsapp.R;
 import com.example.fluper.newsapp.databinding.FragmentProfileBinding;
 import com.example.fluper.newsapp.payment.PaymentActivity;
 import com.example.fluper.newsapp.profile.EditProfileActivity;
+import com.example.fluper.newsapp.profile.InviteAndEarnsActivity;
 import com.example.fluper.newsapp.profile.SettingActivity;
 
 /**
@@ -38,6 +39,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
         binding.editProfile.setOnClickListener (this);
         binding.settig.setOnClickListener (this);
         binding.payments.setOnClickListener (this);
+        binding.Invite.setOnClickListener (this);
         return view;
     }
 
@@ -53,6 +55,9 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
 
             case R.id.payments:
                 startActivity (new Intent (getContext (), PaymentActivity.class));
+                break;
+            case R.id.Invite:
+                startActivity (new Intent (getContext (), InviteAndEarnsActivity.class));
                 break;
         }
     }

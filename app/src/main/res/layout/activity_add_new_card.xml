@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fluper.newsapp.payment.AddNewCardActivity">
+
+
+    <include
+        android:id="@+id/include_tool_add_new_card"
+        layout="@layout/header_tool_layout"></include>
+
+    <TextView
+        android:id="@+id/add_card_text"
+        android:layout_below="@+id/include_tool_add_new_card"
+        android:textSize="@dimen/dp_22"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:text="Add your credit &amp; debit card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/card_number_layout"
+        android:layout_below="@+id/add_card_text"
+        android:layout_marginTop="@dimen/dp_20"
+        android:hint="Card Number"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.example.fluper.newsapp.appUtils.MyEditText
+            android:id="@+id/card_number_text"
+            android:inputType="number"
+            android:textColor="@color/colorGrey"
+            android:background="@android:color/transparent"
+            android:singleLine="true"
+            android:paddingTop="@dimen/dp_4"
+            android:textSize="@dimen/dp_14"
+            android:paddingBottom="@dimen/dp_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <View
+        android:background="@color/colorPink"
+        android:id="@+id/card_number_view"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_below="@+id/card_number_layout"
+        android:layout_width="match_parent"
+        android:alpha=".6"
+        android:layout_height="1dp"></View>
+
+
+    <LinearLayout
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:id="@+id/cvv_layout"
+        android:layout_below="@+id/card_number_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputLayout
+
+            android:id="@+id/cvv_text_input_layout"
+            android:layout_marginTop="@dimen/dp_10"
+            android:hint="CVV"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.example.fluper.newsapp.appUtils.MyEditText
+                android:id="@+id/cvv_text"
+                android:inputType="number"
+                android:textColor="@color/colorGrey"
+                android:background="@android:color/transparent"
+                android:singleLine="true"
+                android:maxLength="3"
+                android:paddingTop="@dimen/dp_4"
+                android:textSize="@dimen/dp_14"
+                android:paddingBottom="@dimen/dp_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <View
+            android:background="@color/colorPink"
+            android:id="@+id/cvv_view"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_below="@+id/cvv_text_input_layout"
+            android:layout_width="match_parent"
+            android:alpha=".6"
+            android:layout_height="1dp"></View>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputLayout
+
+                android:id="@+id/expire_date_input_layout"
+                android:layout_marginTop="@dimen/dp_10"
+                android:hint="Expire Date"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.fluper.newsapp.appUtils.MyEditText
+                    android:id="@+id/expire_date_text"
+                    android:inputType="date"
+                    android:textColor="@color/colorGrey"
+                    android:background="@android:color/transparent"
+                    android:singleLine="true"
+                    android:paddingTop="@dimen/dp_4"
+                    android:textSize="@dimen/dp_14"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <View
+                android:background="@color/colorPink"
+                android:id="@+id/expire_view"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_below="@+id/expire_date_input_layout"
+                android:layout_width="match_parent"
+                android:alpha=".6"
+                android:layout_height="1dp"></View>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:background="@color/colorPink"
+        android:id="@+id/vieww"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_below="@+id/cvv_layout"
+        android:layout_width="match_parent"
+        android:alpha=".6"
+        android:layout_height="1dp"></View>
+
+
+
+
+    <TextView
+        android:id="@+id/default_text"
+        android:layout_below="@+id/vieww"
+        android:text="Set as default"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/dp_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <CheckBox
+        android:id="@+id/rb_set_default_card"
+        android:layout_below="@+id/vieww"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_22"
+        android:button="@drawable/custom_cheack_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+    <Button
+        android:id="@+id/saveBtnAddNewCard"
+        android:background="#11998f"
+        android:layout_alignParentBottom="true"
+        android:text="Save"
+        android:textColor="@color/colorWhite"
+        android:textAllCaps="false"
+        android:textSize="@dimen/sp_15"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+
+
+
+</RelativeLayout>
+</layout>

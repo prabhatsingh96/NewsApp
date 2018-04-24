@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
     <android.support.v7.widget.CardView
-        android:background="@color/colorPrimaryDark"
-        app:cardCornerRadius="@dimen/dp_12"
+        app:cardCornerRadius="@dimen/dp_10"
+        android:layout_margin="@dimen/dp_10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_marginLeft="@dimen/dp_10"
+            android:id="@+id/linear_layout_try_free"
+            android:layout_marginLeft="@dimen/dp_20"
             android:layout_marginRight="@dimen/dp_10"
             android:layout_marginTop="10dp"
             android:orientation="vertical"
@@ -20,6 +20,7 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:id="@+id/article_name_text"
                 android:text="Article Name"
                 android:textSize="14dp"
                 android:textColor="@color/colorPrimary"
@@ -61,27 +62,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
-            <View
-                android:background="@color/colorPink"
-                android:alpha=".6"
-                android:layout_marginTop="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"></View>
-
-            <TextView
-                android:text="Continue"
-                android:layout_marginTop="12dp"
-                android:layout_marginBottom="12dp"
-                android:gravity="center"
-                android:textSize="17dp"
-                android:textColor="@color/colorPrimary"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
         </LinearLayout>
+        <View
+            android:id="@+id/view_try_free"
+            android:layout_below="@+id/linear_layout_try_free"
+            android:background="@color/colorPink"
+            android:alpha=".6"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></View>
 
+        <TextView
+            android:id="@+id/continue_tv"
+            android:layout_below="@+id/view_try_free"
+            android:text="Continue"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        </RelativeLayout>
 
     </android.support.v7.widget.CardView>
-
-
-</RelativeLayout>
 </layout>

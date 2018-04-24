@@ -54,12 +54,12 @@
           <com.example.fluper.newsapp.appUtils.MyTextView
               android:id="@+id/heading_text_dscp"
               android:layout_below="@+id/heading_text_desc"
-              android:text="Lorem ipsum copsum"
+              android:text="lorem ipsum copsum"
               android:textColor="@color/colorPrimary"
               android:textSize="14dp"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:layout_marginBottom="5dp"
+              android:layout_marginBottom="1dp"
               />
           <TextView
               android:id="@+id/count"
@@ -70,7 +70,7 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content" />
           <TextView
-              android:layout_marginTop="113dp"
+              android:layout_marginTop="114dp"
               android:text="January 20, 2018"
               android:textColor="@color/colorGrey"
               android:textSize="12dp"

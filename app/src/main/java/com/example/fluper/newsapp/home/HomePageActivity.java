@@ -2,15 +2,20 @@ package com.example.fluper.newsapp.home;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.support.design.widget.BottomSheetDialog;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 
 import com.example.fluper.newsapp.R;
 import com.example.fluper.newsapp.authentication.TabAdapter;
 import com.example.fluper.newsapp.databinding.ActivityHomePageBinding;
+import com.example.fluper.newsapp.subscription.SubscriptionDetailsRecyclerLayout;
 
 import butterknife.BindView;
 
@@ -33,6 +38,8 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
         binding.includeBottomLayout.relSearch.setOnClickListener (this);
         binding.includeBottomLayout.relBookmark.setOnClickListener (this);
         binding.includeToolHome.notificationIcon.setOnClickListener (this);
+        binding.includeToolHome.sortIcon.setOnClickListener (this);
+        binding.includeToolHome.filterIcon.setOnClickListener (this);
 
         binding.includeBottomLayout.ivHome.setImageResource (R.drawable.bottom_home_ac);
         binding.includeBottomLayout.homeText.setTextColor (getResources ().getColor
@@ -166,7 +173,33 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
                 startActivity (new Intent (this, NotificationActivity.class));
                 break;
 
+            case R.id.filter_icon:
+                 openFilterDialog();
+                 break;
+            case R.id.sort_icon:
+                 openSortDialog();
+                 break;
         }
+    }
+
+
+
+    private void openSortDialog() {
+
+        LayoutInflater inflater = (LayoutInflater)this.getSystemService(LAYOUT_INFLATER_SERVICE);
+        View view1 = inflater.inflate(R.layout.sort_layout, null);
+        BottomSheetDialog dialog = new BottomSheetDialog(this); dialog.setContentView(view1);
+        dialog.show();
+
+    }
+
+
+
+    private void openFilterDialog() {
+        LayoutInflater inflater = (LayoutInflater)this.getSystemService(LAYOUT_INFLATER_SERVICE);
+        View view1 = inflater.inflate(R.layout.filter_layout, null);
+        BottomSheetDialog dialog = new BottomSheetDialog(this); dialog.setContentView(view1);
+        dialog.show();
     }
 
     public void replaceFragment(int fragmentId, Fragment fragment) {

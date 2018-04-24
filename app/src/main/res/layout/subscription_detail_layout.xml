@@ -10,11 +10,10 @@
     <TextView
 
             android:id="@+id/detail_text_subscription_details"
-            android:background="@color/colorPrimaryDark"
-            android:alpha=".9"
+            android:background="@color/colorBottomSheet"
             android:text="Details"
             android:textColor="@color/colorPrimary"
-        android:layout_marginLeft="@dimen/dp_10"
+            android:paddingLeft="@dimen/dp_10"
             android:textStyle="bold"
             android:textSize="18dp"
             android:layout_width="match_parent"

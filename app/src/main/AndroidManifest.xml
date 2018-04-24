@@ -69,7 +69,19 @@
         <activity
             android:name=".payment.PaymentActivity"
             android:theme="@style/splashScreen" />
-        <activity android:name=".subscription.SubscriptionActivity"
+        <activity
+            android:name=".subscription.SubscriptionActivity"
+            android:theme="@style/splashScreen" />
+        <activity
+            android:name=".payment.PaymentInfoActivity"
+            android:theme="@style/splashScreen" />
+        <activity
+            android:name=".payment.AddNewCardActivity"
+            android:theme="@style/splashScreen" />
+        <activity
+            android:name=".profile.InviteAndEarnsActivity"
+            android:theme="@style/splashScreen" />
+        <activity android:name=".subscription.ArticleNameReadMoreActivity"
             android:theme="@style/splashScreen"
             ></activity>
     </application>
