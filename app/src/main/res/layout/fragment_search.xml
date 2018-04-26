@@ -22,7 +22,7 @@
         android:layout_below="@+id/search_box"
         android:layout_marginTop="12dp"
         android:layout_marginLeft="@dimen/dp_16"
-        android:text="Magazine"
+        android:text="Magazines"
         android:textSize="@dimen/dp_22"
         android:textStyle="bold"
         android:textColor="@color/colorPrimary"

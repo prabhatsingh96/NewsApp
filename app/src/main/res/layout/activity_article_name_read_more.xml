@@ -33,7 +33,7 @@
         android:layout_marginTop="8dp"
         android:text="Silence, Please, I'm Heading"
         android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/dp_20"
+        android:textSize="@dimen/dp_23"
         android:textStyle="bold" />
 
     <TextView
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/heading_text"
         android:layout_marginLeft="@dimen/dp_20"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:text="USA, English, January 20, 2018"
         android:textColor="@color/colorPink"
         android:textSize="13dp" />
@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/date_text"
         android:layout_marginLeft="@dimen/dp_20"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:text="Description"
         android:textColor="@color/colorPrimary"
         android:textSize="13dp" />
@@ -109,7 +109,7 @@
             android:text="Aa"
             android:textColor="@color/colorPrimary"
             android:textSize="@dimen/dp_16"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="14dp"
             android:layout_width="20dp"
             android:layout_height="20dp" />
 
@@ -118,11 +118,9 @@
             android:src="@drawable/minus"
             android:layout_marginBottom="@dimen/dp_15"
             android:layout_toLeftOf="@+id/Aa_text"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="14dp"
             android:layout_width="20dp"
             android:layout_height="20dp" />
-
-
     </RelativeLayout>
 
 

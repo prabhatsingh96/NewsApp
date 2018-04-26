@@ -31,7 +31,7 @@ public class BookMarksAdapter  extends RecyclerView.Adapter<BookMarksAdapter.MyV
         iv.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                context.startActivity (new Intent (context, ArticleDescriptionActivity.class));
+               // context.startActivity (new Intent (context, ArticleDescriptionActivity.class));
             }
         });
         // view.setOnClickListener ((View.OnClickListener) context);

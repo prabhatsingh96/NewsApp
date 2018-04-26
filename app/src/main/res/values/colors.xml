@@ -10,7 +10,8 @@
     <color name="colorbutton">#11998f</color>
     <color name="colorGreen">#31dc83</color>
     <color name="colorGrey">#808080</color>
-    <color name="colorBottomSheet">#e2f0f0</color>
+    <color name="colorBottomSheet">#D3D3D3</color>
+    <color name="hjdfh">#e2f0f0</color>
 
 
 </resources>

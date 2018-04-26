@@ -6,11 +6,13 @@
 
     <TextView
         android:id="@+id/sort_by_text"
-        android:text="Sort By"
+        android:text="Sort by"
         android:textColor="@color/colorPrimary"
         android:textSize="16dp"
         android:textStyle="bold"
-        android:padding="@dimen/dp_18"
+        android:paddingTop="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_12"
+        android:paddingLeft="@dimen/dp_18"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <View
@@ -30,6 +32,8 @@
     <View
         android:background="@color/colorPink"
         android:alpha=".6"
+        android:layout_marginLeft="@dimen/dp_18"
+        android:layout_marginRight="@dimen/dp_18"
         android:layout_width="match_parent"
         android:layout_height="1dp"></View>
 
@@ -45,6 +49,8 @@
     <View
         android:background="@color/colorPink"
         android:alpha=".6"
+        android:layout_marginLeft="@dimen/dp_18"
+        android:layout_marginRight="@dimen/dp_18"
         android:layout_width="match_parent"
         android:layout_height="1dp"></View>
 

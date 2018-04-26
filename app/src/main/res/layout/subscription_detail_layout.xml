@@ -14,10 +14,12 @@
             android:text="Details"
             android:textColor="@color/colorPrimary"
             android:paddingLeft="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_6"
+            android:paddingTop="@dimen/dp_6"
             android:textStyle="bold"
-            android:textSize="18dp"
+            android:textSize="17dp"
             android:layout_width="match_parent"
-          android:layout_height="30dp" />
+          android:layout_height="wrap_content" />
 
 
 

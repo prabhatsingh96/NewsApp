@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.example.fluper.newsapp.R;
 import com.example.fluper.newsapp.databinding.ActivityArticleDescriptionBinding;
+import com.example.fluper.newsapp.payment.PaymentInfoActivity;
 import com.example.fluper.newsapp.subscription.SubscriptionActivity;
 
 public class ArticleDescriptionActivity extends AppCompatActivity implements View.OnClickListener{
@@ -30,6 +31,7 @@ public class ArticleDescriptionActivity extends AppCompatActivity implements Vie
         binding.rvProductDescription.setAdapter (adapter);
         binding.backBtnDescription.setOnClickListener (this);
         binding.subcribreLayout.setOnClickListener (this);
+        binding.buynowBtn.setOnClickListener (this);
 
 
     }
@@ -44,6 +46,10 @@ public class ArticleDescriptionActivity extends AppCompatActivity implements Vie
             case R.id.subcribre_layout:
                 startActivity (new Intent (this, SubscriptionActivity.class));
                 break;
+
+                case R.id.buynow_btn:
+                    startActivity (new Intent (this, PaymentInfoActivity.class));
+                    break;
         }
 
     }

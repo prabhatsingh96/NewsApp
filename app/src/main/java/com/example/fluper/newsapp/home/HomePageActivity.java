@@ -2,6 +2,8 @@ package com.example.fluper.newsapp.home;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.BottomSheetDialog;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -10,9 +12,12 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.example.fluper.newsapp.R;
+import com.example.fluper.newsapp.appUtils.BottomNavigationViewHelper;
 import com.example.fluper.newsapp.authentication.TabAdapter;
 import com.example.fluper.newsapp.databinding.ActivityHomePageBinding;
 import com.example.fluper.newsapp.subscription.SubscriptionDetailsRecyclerLayout;
@@ -22,8 +27,7 @@ import butterknife.BindView;
 public class HomePageActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ActivityHomePageBinding binding;
-    @BindView(R.id.include_forgot_layout)
-    View toolLayout;
+    private BottomSheetDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +35,10 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
 
         binding = DataBindingUtil.setContentView (this, R.layout.activity_home_page);
         addFirstFragment ();
+
+        /*binding.navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        BottomNavigationViewHelper.disableShiftMode(binding.navigation);*/
+
 
         binding.includeBottomLayout.relProfile.setOnClickListener (this);
         binding.includeBottomLayout.relHome.setOnClickListener (this);
@@ -46,6 +54,47 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
                 (R.color.colorbutton));
 
     }
+
+
+
+
+/*
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            Fragment fragment;
+            switch (item.getItemId()) {
+                case R.id.navigation_home:
+                    replaceFragment (R.id.home_fragment_container, new HomePageFragment ());
+                    return true;
+                case R.id.navigation_search:
+                    replaceFragment (R.id.home_fragment_container, new SearchFragment ());
+                    return true;
+                case R.id.navigation_saved:
+                    replaceFragment (R.id.home_fragment_container, new SavedFragment ());
+                    return true;
+                case R.id.navigation_profile:
+                    replaceFragment (R.id.home_fragment_container, new ProfileFragment ());
+                    return true;
+                case R.id.bookmarkk:
+                    replaceFragment (R.id.home_fragment_container, new BookmarkFragment ());
+                    return true;
+            }
+            return false;
+        }
+    };*/
+
+
+
+
+
+
+
+
+
+
 
     @Override
     public void onClick(View v) {
@@ -183,12 +232,10 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
     }
 
 
-
     private void openSortDialog() {
-
         LayoutInflater inflater = (LayoutInflater)this.getSystemService(LAYOUT_INFLATER_SERVICE);
         View view1 = inflater.inflate(R.layout.sort_layout, null);
-        BottomSheetDialog dialog = new BottomSheetDialog(this); dialog.setContentView(view1);
+        dialog = new BottomSheetDialog(this); dialog.setContentView(view1);
         dialog.show();
 
     }
@@ -198,7 +245,14 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
     private void openFilterDialog() {
         LayoutInflater inflater = (LayoutInflater)this.getSystemService(LAYOUT_INFLATER_SERVICE);
         View view1 = inflater.inflate(R.layout.filter_layout, null);
-        BottomSheetDialog dialog = new BottomSheetDialog(this); dialog.setContentView(view1);
+        TextView applyText = view1.findViewById (R.id.apply_text);
+        final BottomSheetDialog dialog = new BottomSheetDialog(this); dialog.setContentView(view1);
+        applyText.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss ();
+            }
+        });
         dialog.show();
     }
 
@@ -216,4 +270,5 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
         ft.add (R.id.home_fragment_container, new HomePageFragment ());
         ft.commit ();
     }
+
 }

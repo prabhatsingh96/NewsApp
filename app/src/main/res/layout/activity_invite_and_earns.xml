@@ -51,11 +51,10 @@
     <TextView
         android:id="@+id/share_link_text"
         android:layout_below="@+id/earns_header_layout"
-        android:textSize="@dimen/dp_22"
+        android:textSize="@dimen/dp_24"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
         android:layout_marginTop="22dp"
-        android:layout_marginRight="110dp"
         android:layout_marginLeft="@dimen/dp_20"
         android:text="Share your link &amp; get $25"
         android:layout_width="match_parent"

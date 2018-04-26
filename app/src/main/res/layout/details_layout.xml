@@ -8,17 +8,18 @@
         android:id="@+id/bb"
         android:layout_below="@+id/detail_text_subscription_details"
         android:background="@drawable/black_oval_bubble_layout"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="16dp"
           android:layout_marginLeft="10dp"
-        android:layout_width="8dp"
-        android:layout_height="8dp" />
+        android:layout_width="5dp"
+        android:layout_height="5dp" />
            <TextView
                android:background="@color/colorPrimaryDark"
                android:id="@+id/text_details_subscription"
                android:layout_toRightOf="@+id/bb"
                android:textColor="@color/colorPrimary"
-               android:textSize="14dp"
-               android:layout_marginTop="10dp"
+               android:textSize="13dp"
+               android:layout_marginBottom="5dp"
+               android:layout_marginTop="7dp"
                android:layout_marginLeft="6dp"
                android:layout_marginRight="@dimen/dp_10"
                android:text="Lorem ipsum icsum dolor sit amet,Lorem ipsum icsum dolor sit amet, Lorem ipsum icsum dolor sit amet"

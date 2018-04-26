@@ -2,10 +2,9 @@
 
     <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/intro_background"
-        android:background="@color/colorPrimary"
-        android:alpha=".9"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#DD262626"
         tools:context="com.example.fluper.newsapp.home.ReletedFragment">
         <!--
            <me.relex.circleindicator.CircleIndicator

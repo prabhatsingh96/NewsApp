@@ -17,7 +17,7 @@ public class IntroFragment extends Fragment {
 
 
 
-        private static final String BACKGROUND_COLOR = "backgroundColor";
+        private static final String BACKGROUND_COLOR = "#000000";
         private static final String PAGE = "page";
 
         private int mBackgroundColor, mPage;

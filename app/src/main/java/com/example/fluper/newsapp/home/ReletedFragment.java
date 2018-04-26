@@ -1,16 +1,26 @@
 package com.example.fluper.newsapp.home;
 
+import android.arch.lifecycle.ReportFragment;
+import android.content.Context;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.RelativeLayout;
 
 import com.example.fluper.newsapp.R;
 import com.example.fluper.newsapp.databinding.FragmentReletedBinding;
+import com.example.fluper.newsapp.databinding.SaveArticleDiscriptionBinding;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,6 +29,14 @@ public class ReletedFragment extends Fragment implements View.OnClickListener{
 
     private FragmentReletedBinding binding;
     private View view;
+    private SaveArticleDiscription save;
+    private ViewPagerAdapter adapter;
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach (context);
+        save = (SaveArticleDiscription) context;
+    }
 
     public ReletedFragment() {
         // Required empty public constructor
@@ -37,6 +55,28 @@ public class ReletedFragment extends Fragment implements View.OnClickListener{
         return view;
     }
 
+
+
+   /* public void setViewPager(){
+        List<Fragment> fragments = getFragments();
+        adapter = new ViewPagerAdapter (getActivity ().getSupportFragmentManager(), fragments);
+        binding.reletedSearchViewPager.setAdapter(adapter);
+    }
+
+
+
+
+    private List<Fragment> getFragments() {
+        List<Fragment> fList = new ArrayList<Fragment> ();
+        fList.add (new ReletedFragment ());
+        fList.add (new ReletedFragment ());
+        fList.add (new ReletedFragment ());
+        fList.add (new ReletedFragment ());
+        fList.add (new ReletedFragment ());
+        fList.add (new ReletedFragment ());
+        return fList;
+    }*/
+
     public void setViewPager() {
         binding.reletedSearchViewPager.setClipToPadding (false);
         binding.reletedSearchViewPager.setPadding (0, 0, 30, 0);
@@ -48,7 +88,7 @@ public class ReletedFragment extends Fragment implements View.OnClickListener{
 
         // circleIndicator.setViewPager( binding.reletedSearchViewPager);
 
-      /*  android.support.v4.app.FragmentManager  fm = getSupportFragmentManager();
+     /*   android.support.v4.app.FragmentManager  fm = getSupportFragmentManager();
         android.support.v4.app.FragmentTransaction ft = fm.beginTransaction();
         ft.add(R.id.layout_container, new HomeFragmentOne());
         ft.commit();
@@ -56,12 +96,14 @@ public class ReletedFragment extends Fragment implements View.OnClickListener{
 
     }
 
-    @Override
     public void onClick(View view) {
-        switch (view.getId ()){
+        switch (view.getId ()) {
             case R.id.iv_cancel_releted_serch:
-                startActivity (new Intent (getContext (), SaveArticleDiscription.class));
+                save.removeFragment ();
+                getContext ().startActivity (new Intent (getContext (), SaveArticleDiscription.class));
+                getActivity ().finish ();
                 break;
         }
     }
 }
+

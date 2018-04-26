@@ -19,6 +19,7 @@ public class ArticleNameReadMoreActivity extends AppCompatActivity implements Vi
         binding = DataBindingUtil.setContentView (this,R.layout.activity_article_name_read_more);
         binding.includeArticleNameTool.headerBack.setOnClickListener (this);
         binding.includeArticleNameTool.headerToolText.setText ("Article Name");
+        binding.includeArticleNameTool.headerBack.setImageResource (R.drawable.cancel);
 
     }
 
@@ -26,7 +27,7 @@ public class ArticleNameReadMoreActivity extends AppCompatActivity implements Vi
     public void onClick(View view) {
         switch (view.getId ()){
             case R.id.header_back:
-                super.onBackPressed ();
+                onBackPressed ();
                 break;
         }
     }

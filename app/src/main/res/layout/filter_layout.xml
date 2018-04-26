@@ -25,7 +25,7 @@
          android:layout_alignParentRight="true"
          android:text="Apply"
          android:textColor="@color/colorPrimary"
-         android:textSize="@dimen/dp_14"
+         android:textSize="@dimen/dp_12"
          android:paddingTop="@dimen/dp_10"
          android:paddingLeft="@dimen/dp_15"
          android:paddingBottom="@dimen/dp_10"
@@ -75,6 +75,8 @@
         android:layout_below="@+id/top_seller_text"
         android:background="@color/colorPink"
         android:alpha=".6"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_20"
         android:layout_width="match_parent"
         android:layout_height="1dp"></View>
 
@@ -109,6 +111,8 @@
         android:layout_below="@+id/featured_text"
         android:background="@color/colorPink"
         android:alpha=".6"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_20"
         android:layout_width="match_parent"
         android:layout_height="1dp"></View>
 
@@ -145,6 +149,8 @@
         android:layout_below="@+id/magazines_text"
         android:background="@color/colorPink"
         android:alpha=".6"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_20"
         android:layout_width="match_parent"
         android:layout_height="1dp"></View>
 
@@ -180,6 +186,8 @@
         android:layout_below="@+id/new_arrivals_text"
         android:background="@color/colorPink"
         android:alpha=".6"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_20"
         android:layout_width="match_parent"
         android:layout_height="1dp"></View>
 

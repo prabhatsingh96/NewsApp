@@ -1,5 +1,6 @@
 package com.example.fluper.newsapp.home;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -15,7 +16,7 @@ import com.example.fluper.newsapp.databinding.FragmentHomePageBinding;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomePageFragment extends Fragment {
+public class HomePageFragment extends Fragment implements View.OnClickListener{
 
     private FragmentHomePageBinding binding;
     private View view;
@@ -41,7 +42,17 @@ public class HomePageFragment extends Fragment {
         binding.homeRecyclerVieww.setLayoutManager (new GridLayoutManager (getContext (), 2));
         adapterRectangle = new MyHomeRecyclerAdapter (getContext ());
         binding.homeRecyclerVieww.setAdapter (adapterRectangle);
+        binding.btnSeeAll.setOnClickListener (this);
         return view;
     }
 
+    @Override
+    public void onClick(View view) {
+
+        switch (view.getId ()){
+            case R.id.btn_see_all:
+                startActivity (new Intent (getContext (), BestSellerActivity.class));
+                break;
+        }
+    }
 }

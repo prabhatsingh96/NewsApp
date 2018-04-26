@@ -17,7 +17,7 @@ public class InviteAndEarnsActivity extends AppCompatActivity implements View.On
         super.onCreate (savedInstanceState);
        // setContentView (R.layout.activity_invite_and_earns);
         binding = DataBindingUtil.setContentView (this,R.layout.activity_invite_and_earns);
-        binding.includeToolInviteAndEarns.headerToolText.setText ("Invite &amp; Earn");
+        binding.includeToolInviteAndEarns.headerToolText.setText ("Invite & Earn");
         binding.includeToolInviteAndEarns.headerBack.setOnClickListener (this);
 
     }

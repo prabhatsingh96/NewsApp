@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
+
 import android.databinding.DataBindingUtil;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.widget.DatePicker;
 
 import com.example.fluper.newsapp.R;
+import com.example.fluper.newsapp.appUtils.Validation;
 import com.example.fluper.newsapp.databinding.ActivityAddNewCardBinding;
 
 import java.sql.Date;
@@ -40,8 +42,25 @@ public class AddNewCardActivity extends AppCompatActivity implements View.OnClic
                 super.onBackPressed ();
                 break;
             case R.id.saveBtnAddNewCard:
-                startActivity (new Intent (this, PaymentActivity.class));
-                break;
+
+                if(!Validation.isValidPassword (binding.cardNumberText.getText ().toString ().trim ())){
+                    binding.cardNumberText.setEnabled (true);
+                    binding.cardNumberText.setError ("Please enter card number");}
+                else if(!Validation.isValidPassword (binding.cvvText.getText ().toString ().trim ())) {
+                    binding.cvvText.setEnabled (true);
+                    binding.cvvText.setError ("Please enter CVV");
+                }
+                else if(!Validation.isValidPassword (binding.expireDateText.getText ().toString ().trim ())) {
+                    binding.expireDateText.setEnabled (true);
+                    binding.expireDateText.setError ("Please enter expire date");
+                }
+                else {
+                    startActivity (new Intent (this, PaymentActivity.class));
+                    binding.expireDateText.setText ("");
+                    binding.cvvText.setText ("");
+                    binding.cardNumberText.setText ("");
+                    break;
+                }
             /*case R.id.expire_date_text:
                 DialogFragment newFragment = new DatePickerFragment();
                 newFragment.show(getSupportFragmentManager(), "datePicker");

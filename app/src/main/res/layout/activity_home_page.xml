@@ -162,9 +162,8 @@
 
 -->
 
-        <!--
 
-                <android.support.design.widget.BottomNavigationView
+              <!--  <android.support.design.widget.BottomNavigationView
                     android:layout_alignParentBottom="true"
                     android:id="@+id/navigation"
                     android:layout_width="match_parent"
@@ -176,8 +175,7 @@
                     app:itemIconTint="@color/colorPurple"
                     app:itemTextColor="@color/colorPurple"
                     app:menu="@menu/navigation" />
-
-        -->
+-->
 
 
     </RelativeLayout>
