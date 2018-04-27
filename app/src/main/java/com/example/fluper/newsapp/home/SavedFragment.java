@@ -1,5 +1,6 @@
 package com.example.fluper.newsapp.home;
 
+import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -19,9 +20,17 @@ public class SavedFragment extends Fragment {
     private FragmentSavedBinding binding;
     private View view;
     private SavedRecyclerAdapter adapter;
+    private HomePageActivity home;
 
     public SavedFragment() {
         // Required empty public constructor
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach (context);
+        home = (HomePageActivity) context;
+
     }
 
     @Override
@@ -32,13 +41,18 @@ public class SavedFragment extends Fragment {
         binding = DataBindingUtil.inflate (
                 inflater, R.layout.fragment_saved, container, false);
         view = binding.getRoot ();
+        initControles ();
+
+        return view;
+    }
+
+
+    public void initControles(){
 
         binding.savedRecycleView.setLayoutManager (new LinearLayoutManager (getContext (),
                 LinearLayoutManager.VERTICAL,true));
-        adapter = new SavedRecyclerAdapter (getContext ());
+        adapter = new SavedRecyclerAdapter (getContext (),home);
         binding.savedRecycleView.setAdapter (adapter);
-
-        return view;
     }
 
 }

@@ -15,6 +15,13 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate (savedInstanceState);
         binding = DataBindingUtil.setContentView (this,R.layout.activity_home);
         tabSetUp ();
+        initControles ();
+    }
+
+
+    //All clicks events listener
+    public void initControles(){
+
     }
 
     public void tabSetUp(){

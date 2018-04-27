@@ -21,7 +21,11 @@ public class BestSellerActivity extends AppCompatActivity implements View.OnClic
         super.onCreate (savedInstanceState);
         //setContentView (R.layout.activity_best_seller);
         binding = DataBindingUtil.setContentView (this, R.layout.activity_best_seller);
+        initControles ();
 
+    }
+
+    public void initControles(){
         rectangleAdapter  =     new BestSellerRectangleRecyclerAdapter (this);
         squreAdapter      =     new BestSellerSqureRecyclerAdapter (this);
 

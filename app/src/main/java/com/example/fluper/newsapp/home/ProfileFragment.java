@@ -36,12 +36,19 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
         binding = DataBindingUtil.inflate (
                 inflater, R.layout.fragment_profile, container, false);
         view = binding.getRoot ();
+        initControles ();
+        return view;
+    }
+
+
+
+    public void initControles(){
         binding.editProfile.setOnClickListener (this);
         binding.settig.setOnClickListener (this);
         binding.payments.setOnClickListener (this);
         binding.Invite.setOnClickListener (this);
-        return view;
     }
+
 
     @Override
     public void onClick(View view) {

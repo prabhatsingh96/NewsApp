@@ -35,6 +35,12 @@ public class HomePageFragment extends Fragment implements View.OnClickListener{
         binding = DataBindingUtil.inflate (
                 inflater, R.layout.fragment_home_page, container, false);
         view = binding.getRoot ();
+       initControles ();
+        return view;
+    }
+
+
+    public void initControles(){
         mMyRecyclerAdapter = new MyRecyclerAdapter (getContext ());
         binding.homeRecyclerView.setLayoutManager (new LinearLayoutManager
                 (getContext (), LinearLayoutManager.HORIZONTAL, true));
@@ -43,7 +49,6 @@ public class HomePageFragment extends Fragment implements View.OnClickListener{
         adapterRectangle = new MyHomeRecyclerAdapter (getContext ());
         binding.homeRecyclerVieww.setAdapter (adapterRectangle);
         binding.btnSeeAll.setOnClickListener (this);
-        return view;
     }
 
     @Override

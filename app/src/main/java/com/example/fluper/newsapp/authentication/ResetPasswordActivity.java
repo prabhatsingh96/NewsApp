@@ -23,6 +23,12 @@ public class ResetPasswordActivity extends AppCompatActivity implements View.OnC
         super.onCreate (savedInstanceState);
        //setContentView (R.layout.activity_reset_password);
         binding = DataBindingUtil.setContentView (this, R.layout.activity_reset_password);
+        initControles ();
+    }
+
+
+
+    public void initControles(){
         binding.includeOtpLayout.headerBack.setOnClickListener (this);
         binding.submitPassword.setOnClickListener (this);
         binding.includeOtpLayout.headerBack.setImageResource (R.drawable.cancel);

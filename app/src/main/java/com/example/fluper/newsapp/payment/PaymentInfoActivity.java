@@ -31,18 +31,21 @@ public class PaymentInfoActivity extends AppCompatActivity implements View.OnCli
         super.onCreate (savedInstanceState);
         //setContentView (R.layout.activity_payment_info);
         binding = DataBindingUtil.setContentView (this, R.layout.activity_payment_info);
+        initControles ();
+
+    }
+
+
+    public void initControles(){
         adapter = new PaymentInfoRecyclerAdapter (this);
         binding.recyclerListPaymentMode.setLayoutManager (new LinearLayoutManager (this));
         binding.recyclerListPaymentMode.setAdapter (adapter);
         binding.includeHeaderToolPaymentInfo.headerToolText.setText ("Payment Info");
         binding.includeHeaderToolPaymentInfo.headerBack.setOnClickListener (this);
         binding.proceedBtnPaymentInfo.setOnClickListener (this);
-
-
-
-
-
     }
+
+
 
     @Override
     public void onClick(View view) {

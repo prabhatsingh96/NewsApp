@@ -17,20 +17,25 @@ import com.example.fluper.newsapp.home.HomePageActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class CreateProfileActivity extends AppCompatActivity implements View.OnClickListener{
+public class CreateProfileActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ActivityCreateProfileBinding binding;
-    @BindView( R.id.inlude_create_tool_layout) View toolLayout;
+    @BindView(R.id.inlude_create_tool_layout)
+    View toolLayout;
     private IncludedLayout includeForgotLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
         //setContentView (R.layout.activity_create_profile);
-        binding = DataBindingUtil.setContentView (this,R.layout.activity_create_profile);
+        binding = DataBindingUtil.setContentView (this, R.layout.activity_create_profile);
+        initControles ();
+    }
+
+    public void initControles() {
         ButterKnife.bind (this);
         includeForgotLayout = new IncludedLayout ();
-        ButterKnife.bind( includeForgotLayout, toolLayout );
+        ButterKnife.bind (includeForgotLayout, toolLayout);
         binding.inludeCreateToolLayout.headerToolText.setText ("Create Profile");
         binding.inludeCreateToolLayout.headerBack.setVisibility (View.GONE);
         binding.saveBtn.setOnClickListener (this);
@@ -39,22 +44,19 @@ public class CreateProfileActivity extends AppCompatActivity implements View.OnC
 
     @Override
     public void onClick(View v) {
-        switch(v.getId ()){
+        switch (v.getId ()) {
             case R.id.saveBtn:
-                if(!Validation.isValidPassword (binding.fullNameTextCreateProfile.getText ().toString ())) {
-                binding.fullNameTextCreateProfile.setEnabled (true);
-                binding.fullNameTextCreateProfile.setError ("Please enter full name.");
+                if (!Validation.isValidPassword (binding.fullNameTextCreateProfile.getText ().toString ())) {
+                    binding.fullNameTextCreateProfile.setEnabled (true);
+                    binding.fullNameTextCreateProfile.setError ("Please enter full name.");
 
-                break;
-            }
-                else if(!Validation.isValidPassword (binding.emailTextCreateProfile.getText ().toString ().trim ())){
+                    break;
+                } else if (!Validation.isValidPassword (binding.emailTextCreateProfile.getText ().toString ().trim ())) {
                     binding.emailTextCreateProfile.setEnabled (true);
                     binding.emailTextCreateProfile.setError ("Please enter email id.");
 
                     break;
-                }
-
-            else if(!Validation.isValidEmail (binding.emailTextCreateProfile.getText ().toString ().trim ())){
+                } else if (!Validation.isValidEmail (binding.emailTextCreateProfile.getText ().toString ().trim ())) {
                     binding.emailTextCreateProfile.setEnabled (true);
                     binding.emailTextCreateProfile.setError ("Please enter valid email id.");
 
@@ -67,13 +69,12 @@ public class CreateProfileActivity extends AppCompatActivity implements View.OnC
                     break;
                 }*/
 
-                else if(!Validation.isValidPassword (binding.intrestTextCreateProfile.getText ().toString ().trim ())){
+                else if (!Validation.isValidPassword (binding.intrestTextCreateProfile.getText ().toString ().trim ())) {
                     binding.intrestTextCreateProfile.setEnabled (true);
                     binding.intrestTextCreateProfile.setError ("Please enter your interest.");
 
                     break;
-                }
-                else {
+                } else {
 
                     startActivity (new Intent (this, HomePageActivity.class));
                     binding.fullNameTextCreateProfile.setText ("");
@@ -86,7 +87,7 @@ public class CreateProfileActivity extends AppCompatActivity implements View.OnC
     }
 
     static class IncludedLayout {
-        @BindView( R.id.header_back )
+        @BindView(R.id.header_back)
         ImageView backImage;
     }
 }

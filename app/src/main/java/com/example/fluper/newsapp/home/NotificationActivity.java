@@ -21,6 +21,11 @@ public class NotificationActivity extends AppCompatActivity implements View.OnCl
         super.onCreate (savedInstanceState);
         //setContentView (R.layout.activity_notification);
         binding = DataBindingUtil.setContentView (this, R.layout.activity_notification);
+       initControles ();
+    }
+
+
+    public void initControles(){
         adapter = new NotificationRecyclerAdapter (this);
         binding.notificationRecyclerView.setLayoutManager (new LinearLayoutManager (this));
         binding.notificationRecyclerView.setAdapter (adapter);

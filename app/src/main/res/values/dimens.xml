@@ -82,5 +82,8 @@
     <dimen name="dp_300">300dp</dimen>
     <dimen name="dp_250">250dp</dimen>
     <dimen name="dp_290">290dp</dimen>
+    <dimen name="dp_62">62dp</dimen>
+    <dimen name="dp_75">75dp</dimen>
+    <dimen name="dp_51">51dp</dimen>
 
 </resources>

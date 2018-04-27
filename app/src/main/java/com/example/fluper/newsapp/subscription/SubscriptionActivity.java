@@ -24,6 +24,12 @@ public class SubscriptionActivity extends AppCompatActivity implements View.OnCl
         super.onCreate (savedInstanceState);
         //setContentView (R.layout.activity_subscription);
         binding = DataBindingUtil.setContentView (this,R.layout.activity_subscription);
+        initControles ();
+    }
+
+
+
+    public void initControles(){
         adapter = new SubscriptionRecyclerAdapter (SubscriptionActivity.this);
         binding.subscriptionRecyclerList.setLayoutManager (new LinearLayoutManager (this));
         binding.subscriptionRecyclerList.setAdapter (adapter);
@@ -31,6 +37,9 @@ public class SubscriptionActivity extends AppCompatActivity implements View.OnCl
         binding.includeToolSubscription.headerToolText.setText ("Subscription");
 
     }
+
+
+
 
     public void dialogOpen()
     {

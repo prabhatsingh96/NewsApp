@@ -28,10 +28,16 @@ public class AddNewCardActivity extends AppCompatActivity implements View.OnClic
         super.onCreate (savedInstanceState);
         //setContentView (R.layout.activity_add_new_card);
         binding = DataBindingUtil.setContentView (this,R.layout.activity_add_new_card);
+        initControles ();
+        //binding.expireDateText.setOnClickListener (this);
+
+    }
+
+
+    public void initControles(){
         binding.includeToolAddNewCard.headerBack.setOnClickListener (this);
         binding.includeToolAddNewCard.headerToolText.setText ("Add New Card");
         binding.saveBtnAddNewCard.setOnClickListener (this);
-        //binding.expireDateText.setOnClickListener (this);
 
     }
 

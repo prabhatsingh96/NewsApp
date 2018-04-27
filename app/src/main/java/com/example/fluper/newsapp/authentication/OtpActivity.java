@@ -26,6 +26,13 @@ public class OtpActivity extends AppCompatActivity implements View.OnClickListen
         super.onCreate (savedInstanceState);
        // setContentView (R.layout.activity_otp);
         binding = DataBindingUtil.setContentView (this,R.layout.activity_otp);
+        initControles ();
+    }
+
+
+
+    //All clicks events listener
+    public void initControles(){
         ButterKnife.bind (this);
         includeForgotLayout = new IncludedLayout ();
         ButterKnife.bind( includeForgotLayout, toolLayout );
@@ -35,6 +42,7 @@ public class OtpActivity extends AppCompatActivity implements View.OnClickListen
         binding.includeOtpLayout.headerToolText.setText ("Enter OTP");
 
     }
+
 
     @Override
     public void onClick(View v) {

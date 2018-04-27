@@ -20,6 +20,11 @@ public class AboutUsActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate (savedInstanceState);
         //setContentView (R.layout.activity_about_us);
         binding = DataBindingUtil.setContentView (this,R.layout.activity_about_us);
+        initControles ();
+    }
+
+
+    public void initControles(){
         binding.includeAboutUs.headerToolText.setText ("About Us");
         binding.includeAboutUs.headerBack.setOnClickListener (this);
 

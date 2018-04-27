@@ -35,11 +35,12 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
 
         binding = DataBindingUtil.setContentView (this, R.layout.activity_home_page);
         addFirstFragment ();
+        initControles ();
+    }
 
-        /*binding.navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        BottomNavigationViewHelper.disableShiftMode(binding.navigation);*/
 
 
+    public void initControles(){
         binding.includeBottomLayout.relProfile.setOnClickListener (this);
         binding.includeBottomLayout.relHome.setOnClickListener (this);
         binding.includeBottomLayout.relSaved.setOnClickListener (this);
@@ -54,7 +55,6 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
                 (R.color.colorbutton));
 
     }
-
 
 
 
@@ -259,6 +259,7 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
     public void replaceFragment(int fragmentId, Fragment fragment) {
         android.support.v4.app.FragmentManager frg = getSupportFragmentManager ();
         FragmentTransaction ft = frg.beginTransaction ();
+        ft.addToBackStack (DeleteArticleFragment.class.getSimpleName ());
         ft.replace (fragmentId, fragment);
         ft.commit ();
     }
@@ -269,6 +270,10 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
         FragmentTransaction ft = frg.beginTransaction ();
         ft.add (R.id.home_fragment_container, new HomePageFragment ());
         ft.commit ();
+    }
+
+    public void hideToolLayout(){
+        binding.homeToolRelativeLayout.setVisibility (View.GONE);
     }
 
 }

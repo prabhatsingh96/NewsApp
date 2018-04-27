@@ -20,9 +20,17 @@ public class TermsAndConditionActivity extends AppCompatActivity implements View
         super.onCreate (savedInstanceState);
        // setContentView (R.layout.activity_terms_and_condition);
         binding = DataBindingUtil.setContentView (this,R.layout.activity_terms_and_condition);
+        initControles ();
+    }
+
+
+
+
+    public void initControles(){
         binding.includeTermsAndConditionTool.headerToolText.setText ("Terms & Conditions");
         binding.includeTermsAndConditionTool.headerBack.setOnClickListener (this);
     }
+
 
     @Override
     public void onClick(View view) {

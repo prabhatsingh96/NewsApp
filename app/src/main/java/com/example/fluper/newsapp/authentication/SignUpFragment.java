@@ -32,9 +32,15 @@ public class SignUpFragment extends Fragment implements View.OnClickListener{
         binding = DataBindingUtil.inflate (
                 inflater, R.layout.fragment_sign_up, container, false);
         view = binding.getRoot ();
-        binding.signupBtn.setOnClickListener (this);
+        initControles ();
 
         return view;
+    }
+
+
+
+    public void initControles(){
+        binding.signupBtn.setOnClickListener (this);
     }
 
     @Override

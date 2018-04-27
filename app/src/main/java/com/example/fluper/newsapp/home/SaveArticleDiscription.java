@@ -39,6 +39,12 @@ public class SaveArticleDiscription extends AppCompatActivity implements View.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
         binding = DataBindingUtil.setContentView (this, R.layout.save_article_discription);
+        initControles ();
+    }
+
+
+
+    public void initControles(){
         binding.tryfreeFragmentContainer.setVisibility (View.VISIBLE);
         binding.bottonArticleLayout.setOnClickListener (this);
         binding.backBtnDescription.setOnClickListener (this);

@@ -26,6 +26,11 @@ public class ArticleDescriptionActivity extends AppCompatActivity implements Vie
         super.onCreate (savedInstanceState);
         //setContentView (R.layout.activity_article_description);
         binding = DataBindingUtil.setContentView (this,R.layout.activity_article_description);
+        initControles ();
+    }
+
+
+    public void initControles(){
         adapter = new MyHomeRecyclerAdapter (this);
         binding.rvProductDescription.setLayoutManager (new GridLayoutManager (this,2));
         binding.rvProductDescription.setAdapter (adapter);

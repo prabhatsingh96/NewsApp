@@ -52,9 +52,14 @@ public class ReletedFragment extends Fragment implements View.OnClickListener{
         view = binding.getRoot ();
         // getActivity ().getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
         setViewPager ();
+        initControles ();
         return view;
     }
 
+
+    public void initControles(){
+
+    }
 
 
    /* public void setViewPager(){

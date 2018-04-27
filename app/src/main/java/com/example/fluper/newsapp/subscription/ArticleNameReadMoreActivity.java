@@ -17,6 +17,12 @@ public class ArticleNameReadMoreActivity extends AppCompatActivity implements Vi
         super.onCreate (savedInstanceState);
         //setContentView (R.layout.activity_article_name_read_more);
         binding = DataBindingUtil.setContentView (this,R.layout.activity_article_name_read_more);
+        initControles ();
+    }
+
+
+
+    public void initControles(){
         binding.includeArticleNameTool.headerBack.setOnClickListener (this);
         binding.includeArticleNameTool.headerToolText.setText ("Article Name");
         binding.includeArticleNameTool.headerBack.setImageResource (R.drawable.cancel);

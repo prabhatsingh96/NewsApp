@@ -31,11 +31,16 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
         binding = DataBindingUtil.inflate (
                 inflater, R.layout.fragment_search, container, false);
         view = binding.getRoot ();
+        initControles ();
+        return view;
+
+    }
+
+
+    public void initControles(){
         adapter = new SearchRecyclerAdapter (getContext ());
         binding.searchRecyclerView.setLayoutManager (new GridLayoutManager (getContext (),2));
         binding.searchRecyclerView.setAdapter (adapter);
-
-        return view;
 
     }
 

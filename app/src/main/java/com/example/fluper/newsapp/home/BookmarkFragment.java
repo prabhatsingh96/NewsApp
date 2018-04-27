@@ -32,15 +32,17 @@ public class BookmarkFragment extends Fragment implements View.OnClickListener{
         binding = DataBindingUtil.inflate (
                 inflater, R.layout.fragment_bookmark, container, false);
         view = binding.getRoot ();
+        initControles ();
+        return view;
+    }
+
+
+    public void initControles(){
         binding.bookmarksRecycleView.setLayoutManager (new LinearLayoutManager (getContext (),
                 LinearLayoutManager.VERTICAL,true));
         adapter = new BookMarksAdapter (getContext ());
         binding.bookmarksRecycleView.setAdapter (adapter);
-       // binding.includeBookmarksBottom.ivBookmark.setImageResource (R.drawable.bottom_bookmark_ac);
-
-        return view;
     }
-
 
     @Override
     public void onClick(View view) {

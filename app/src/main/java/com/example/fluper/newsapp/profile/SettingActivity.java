@@ -25,14 +25,22 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate (savedInstanceState);
         //setContentView (R.layout.activity_setting);
         binding = DataBindingUtil.setContentView (this,R.layout.activity_setting);
+        initControles ();
+
+    }
+
+
+
+    public void initControles(){
         binding.inludeToolSettting.headerToolText.setText ("Settings");
         binding.logout.setOnClickListener (this);
         binding.inludeToolSettting.headerBack.setOnClickListener (this);
         binding.terms.setOnClickListener (this);
         binding.aboutUs.setOnClickListener (this);
         binding.privacyPolicy.setOnClickListener (this);
-
     }
+
+
 
     @Override
     public void onClick(View v) {

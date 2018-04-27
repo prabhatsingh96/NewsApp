@@ -18,9 +18,15 @@ public class PrivacyPolicyActivity extends AppCompatActivity implements View.OnC
         super.onCreate (savedInstanceState);
         //setContentView (R.layout.activity_privacy_policy);
         binding = DataBindingUtil.setContentView (this,R.layout.activity_privacy_policy);
+        initControles ();
+    }
+
+
+    public void initControles(){
         binding.includePrivacyPolicyLayout.headerToolText.setText ("Privacy Policy");
         binding.includePrivacyPolicyLayout.headerBack.setOnClickListener (this);
     }
+
 
     @Override
     public void onClick(View view) {

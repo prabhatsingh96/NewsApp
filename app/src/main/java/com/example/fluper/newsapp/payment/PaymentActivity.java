@@ -20,6 +20,11 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate (savedInstanceState);
         //setContentView (R.layout.activity_payment);
         binding = DataBindingUtil.setContentView (this,R.layout.activity_payment);
+        initControles ();
+    }
+
+
+    public void initControles(){
         adapter = new PaymentRecyclerAdapter (this);
         binding.paymentRecyclerList.setLayoutManager (new LinearLayoutManager (this));
         binding.paymentRecyclerList.setAdapter (adapter);
@@ -28,6 +33,7 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
         binding.floatAddBtn.setOnClickListener (this);
 
     }
+
 
     @Override
     public void onClick(View view) {

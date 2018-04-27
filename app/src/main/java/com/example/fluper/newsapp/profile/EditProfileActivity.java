@@ -27,6 +27,11 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         super.onCreate (savedInstanceState);
        // setContentView (R.layout.activity_edit_profile);
         binding = DataBindingUtil.setContentView (this,R.layout.activity_edit_profile);
+        initControles ();
+    }
+
+
+    public void initControles(){
         ButterKnife.bind (this);
         includeForgotLayout = new IncludedLayout ();
         ButterKnife.bind( includeForgotLayout, toolLayout );
@@ -34,9 +39,8 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         binding.inludeCreateToolLayout.headerBack.setOnClickListener (this);
         binding.saveBtn.setOnClickListener (this);
         binding.changePasswordCreate.setOnClickListener (this);
-        
-
     }
+
 
     @Override
     public void onClick(View v) {

@@ -32,9 +32,15 @@ public class LogInFragment extends Fragment implements View.OnClickListener{
                 inflater, R.layout.fragment_log_in, container, false);
        view = binding.getRoot ();
        allBtnClicksListener ();
-
+       initControles ();
 
         return view;
+    }
+
+
+    //All clicks events listener
+    public void initControles(){
+
     }
 
     @Override

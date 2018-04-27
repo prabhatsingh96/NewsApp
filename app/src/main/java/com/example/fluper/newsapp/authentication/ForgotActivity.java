@@ -18,14 +18,20 @@ import butterknife.ButterKnife;
 public class ForgotActivity extends AppCompatActivity implements View.OnClickListener{
     @BindView( R.id.include_forgot_layout ) View toolLayout;
     ActivityForgotBinding binding;
-    private IncludedLayout includeForgotLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
         binding = DataBindingUtil.setContentView (this,R.layout.activity_forgot);
+        initControles ();
+    }
+
+
+    //All clicks events listener
+    public void initControles(){
         binding.includeForgotLayout.headerBack.setOnClickListener (this);
         binding.submitForgot.setOnClickListener (this);
     }
+
 
 
     @Override

@@ -23,15 +23,20 @@ public class ChangePasswordActivity extends AppCompatActivity implements View.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
-        //setContentView (R.layout.activity_change_password);
+        initControles ();
+    }
+
+
+    //all button action liostener
+    public void initControles(){
         binding = DataBindingUtil.setContentView (this,R.layout.activity_change_password);
         binding.includeChangeLayout.headerBack.setOnClickListener (this);
         binding.submitPassword.setOnClickListener (this);
         binding.includeChangeLayout.headerToolText.setText ("Change Password");
 
-
     }
 
+    // on click method
     @Override
     public void onClick(View view) {
         switch (view.getId ()){
@@ -68,8 +73,6 @@ public class ChangePasswordActivity extends AppCompatActivity implements View.On
                     binding.confirmPasswordText.setText ("");
                     break;
                 }
-
-
         }
     }
 }

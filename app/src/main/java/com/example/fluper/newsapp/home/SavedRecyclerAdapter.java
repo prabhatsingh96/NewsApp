@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.fluper.newsapp.R;
@@ -17,10 +18,17 @@ import com.example.fluper.newsapp.R;
 
 public class SavedRecyclerAdapter extends RecyclerView.Adapter<SavedRecyclerAdapter.MyViewHolder> implements View.OnClickListener{
 
-    Context context;
-
-    public SavedRecyclerAdapter(Context context) {
+    private Context context;
+    private HomePageActivity home;
+    public SavedRecyclerAdapter(Context context, HomePageActivity home) {
         this.context = context;
+        this.home = home;
+    }
+
+    @Override
+    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView (recyclerView);
+        home = (HomePageActivity) context;
     }
 
     @Override
@@ -35,6 +43,7 @@ public class SavedRecyclerAdapter extends RecyclerView.Adapter<SavedRecyclerAdap
       holder.homeProductImage.setImageResource (R.drawable.related_img);
       holder.count.setVisibility (View.GONE);
       holder.homeProductImage.setOnClickListener (this);
+      holder.savedRelativeLayout.setOnClickListener (this);
 
     }
 
@@ -50,18 +59,26 @@ public class SavedRecyclerAdapter extends RecyclerView.Adapter<SavedRecyclerAdap
             case R.id.home_product_image_bookmark:
                 context.startActivity (new Intent (context, SaveArticleDiscription.class));
                 break;
+            case R.id.saved_relative_layout:
+                addDeleteFragment();
+                break;
 
         }
+    }
+
+    private void addDeleteFragment() {
+        home.replaceFragment (R.id.home_fragment_container,  new DeleteArticleFragment ());
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
         ImageView homeProductImage;
         TextView count;
+        RelativeLayout savedRelativeLayout;
         public MyViewHolder(View itemView) {
             super (itemView);
             homeProductImage = itemView.findViewById (R.id.home_product_image_bookmark);
             count = itemView.findViewById (R.id.count);
-
+            savedRelativeLayout = itemView.findViewById (R.id.saved_relative_layout);
 
         }
     }
