@@ -41,6 +41,7 @@
             android:background="@android:color/transparent"
             android:singleLine="true"
             android:paddingTop="@dimen/dp_4"
+            android:maxLength="16"
             android:textSize="@dimen/dp_14"
             android:paddingBottom="@dimen/dp_5"
             android:layout_width="match_parent"
@@ -83,11 +84,11 @@
             android:layout_height="wrap_content">
             <com.example.fluper.newsapp.appUtils.MyEditText
                 android:id="@+id/cvv_text"
-                android:inputType="number"
+                android:inputType="numberPassword"
                 android:textColor="@color/colorGrey"
                 android:background="@android:color/transparent"
                 android:singleLine="true"
-                android:maxLength="3"
+                android:maxLength="4"
                 android:paddingTop="@dimen/dp_4"
                 android:textSize="@dimen/dp_14"
                 android:paddingBottom="@dimen/dp_5"

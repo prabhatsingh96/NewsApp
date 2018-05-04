@@ -32,8 +32,6 @@
     <View
         android:background="@color/colorPink"
         android:alpha=".6"
-        android:layout_marginLeft="@dimen/dp_18"
-        android:layout_marginRight="@dimen/dp_18"
         android:layout_width="match_parent"
         android:layout_height="1dp"></View>
 
@@ -49,8 +47,6 @@
     <View
         android:background="@color/colorPink"
         android:alpha=".6"
-        android:layout_marginLeft="@dimen/dp_18"
-        android:layout_marginRight="@dimen/dp_18"
         android:layout_width="match_parent"
         android:layout_height="1dp"></View>
 

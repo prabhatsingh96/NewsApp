@@ -15,7 +15,6 @@
         android:layout_below="@+id/include_header_tool_layout"
         android:layout_marginRight="@dimen/dp_20"
         android:layout_marginLeft="@dimen/dp_20"
-        android:layout_marginBottom="@dimen/dp_70"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
